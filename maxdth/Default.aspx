@@ -16,7 +16,7 @@
                             <div class="card-body">
                                 <div class="border p-4 rounded">
                                     <div class="text-center">
-                                        <h3 class="">Sign in</h3>
+                                        <h3 class="">Login</h3>
                                     </div>
                                     <div class="d-grid">
                                     </div>
@@ -38,7 +38,7 @@
                                             </div>
                                             <div class="col-12">
                                                 <div class="d-grid">
-                                                    <asp:Button class="form-control btn btn-primary" ID="loginbutton" runat="server" Text="Sign In"></asp:Button>
+                                                    <asp:Button class="form-control btn btn-primary" ID="loginbutton" runat="server" Text="Login"></asp:Button>
                                                 </div>
                                             </div>
                                         </div>
