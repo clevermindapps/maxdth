@@ -126,6 +126,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Properties\PublishProfiles\maxdth.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="maxhome.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -703,6 +704,7 @@
     <Content Include="theme\images\avatars\avatar-7.png" />
     <Content Include="theme\images\avatars\avatar-8.png" />
     <Content Include="theme\images\avatars\avatar-9.png" />
+    <Content Include="theme\images\avatars\profilepic.png" />
     <Content Include="theme\images\avatars\suman.png" />
     <Content Include="theme\images\bg-themes\1.png" />
     <Content Include="theme\images\bg-themes\2.png" />
@@ -938,6 +940,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="maxhome.aspx.cs">
+      <DependentUpon>maxhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maxhome.aspx.designer.cs">
+      <DependentUpon>maxhome.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

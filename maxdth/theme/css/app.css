@@ -614,14 +614,14 @@ a {
 
 
 .widgets-icons-2 {
-	width: 56px;
-	height: 56px;
+	width: 45px;
+	height: 45px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: #ededed;
 	font-size: 27px;
-	border-radius: 10px
+	border-radius: 5px
 }
 
 #geographic-map {
@@ -1297,6 +1297,14 @@ a {
 
 
 	border-radius: 30px;
+
+
+}
+
+.radius-1 {
+
+
+	border-radius: 1px;
 
 
 }
@@ -3373,13 +3381,9 @@ a {
 
 
 .bg-gradient-ibiza {
-    background: #ee0979;
-    background: -webkit-linear-gradient(
-	45deg
-	, #ee0979, #ff6a00)!important;
-		background: linear-gradient(
-	45deg
-	, #ee0979, #ff6a00)!important;
+	background: #ee0979;
+	background: -webkit-linear-gradient( 45deg, #ee0979, #ff6a00) !important;
+	background: linear-gradient( 45deg, #ee0979, #ff6a00) !important;
 }
 
 
@@ -4216,7 +4220,7 @@ input::placeholder {
 	padding-left: 0.8rem;
 
 
-	color: #252323;
+	color: #ffffff;
 
 
 	font-size: 22px;
