@@ -10,7 +10,7 @@
                         <div class="mb-4 text-center">
                             <br />
                             <br />
-                            <img src="theme/images/logo.png" height="60px" />
+                            <img src="theme/images/logo.png" height="60" />
                         </div>
                         <div class="card">
                             <div class="card-body">
@@ -38,7 +38,7 @@
                                             </div>
                                             <div class="col-12">
                                                 <div class="d-grid">
-                                                    <asp:Button class="form-control btn btn-primary" ID="loginbutton" runat="server" Text="Login"></asp:Button>
+                                                    <asp:Button class="form-control btn btn-primary" ID="loginbutton" runat="server" Text="Login" OnClick="loginbutton_Click"></asp:Button>
                                                 </div>
                                             </div>
                                         </div>

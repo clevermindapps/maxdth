@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection.Emit;
@@ -12,20 +13,44 @@ namespace maxdth
 {
     public partial class SiteMaster : MasterPage
     {
-        string strconn = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
-        string strimage = "select userphoto from user_tbl where userid=" + "'cmsemp'";
+        string strconn = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(strconn);
-            con.Open();
-            SqlCommand com = new SqlCommand(strimage, con);
-            SqlDataReader reader = com.ExecuteReader();
-            if (reader.Read())
+            try
             {
-                userimage.ImageUrl = reader[0].ToString();
-            }
-            con.Close();
 
+
+                if (Session["usertype"].Equals("employee"))
+                {
+                    
+                    userimage.ImageUrl = Session["userphoto"].ToString();
+
+                    userfullname.Text = Session["fullname"].ToString();
+                    userrole.Text = "Employee";
+                }
+                else if(Session["usertype"].Equals("admin"))
+                {
+                    
+                    userimage.ImageUrl = Session["userphoto"].ToString();
+                    userfullname.Text = Session["fullname"].ToString();
+                    userrole.Text = "Admin";
+                }
+                else
+                {
+                    Response.Redirect("Default.aspx");
+                }
+                
+
+            }
+            catch(Exception ex)
+            {
+                Response.Write(ex.Message);
+            }
+           
         }
+
+      
+        
     }
 }
