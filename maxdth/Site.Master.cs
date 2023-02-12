@@ -56,7 +56,7 @@ namespace maxdth
             Session["fullname"] = "";
             Session["usertype"] = "";
             Session["userphoto"] = "";
-            Response.Redirect("Default.aspx");
+            Response.Redirect("https://www.maxdth.com");
         }
     }
 }
