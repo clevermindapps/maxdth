@@ -50,7 +50,13 @@ namespace maxdth
            
         }
 
-      
-        
+        protected void userlogout_Click(object sender, EventArgs e)
+        {
+            Session["userid"] = "";
+            Session["fullname"] = "";
+            Session["usertype"] = "";
+            Session["userphoto"] = "";
+            Response.Redirect("Default.aspx");
+        }
     }
 }
