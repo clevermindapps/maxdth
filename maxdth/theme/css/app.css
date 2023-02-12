@@ -3306,6 +3306,10 @@ a {
 
 }
 
+.bg-light-secondary {
+	background-color: rgb(108 117 125 / 0.11) !important;
+}
+
 
 .bg-light-success {
 
@@ -3436,6 +3440,14 @@ a {
 
 
 	background: linear-gradient(to right, rgb(142, 45, 226), rgb(74, 0, 224)) !important;
+
+
+}
+
+.bg-gradient-secondary {
+
+
+	background: linear-gradient(to right, rgb(108, 117, 125), rgb(108, 0, 224)) !important;
 
 
 }
