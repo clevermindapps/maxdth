@@ -21,19 +21,23 @@
                         <div class="mb-3 mt-3">
                             <label class="form-label">Old Password</label>
                             <asp:TextBox class="form-control" ID="oldpassword" runat="server" placeholder="Enter Old Password" TextMode="Password"></asp:TextBox>
+                           
                         </div>
                         <br />
                         <hr />
                         <div class="mb-3 mt-5">
                             <label class="form-label">New Password</label>
                             <asp:TextBox class="form-control" ID="newpassword" runat="server" placeholder="Enter New Password" TextMode="Password"></asp:TextBox>
+                           
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Confirm New Password</label>
                             <asp:TextBox class="form-control" ID="confirmnewpassword" runat="server" placeholder="Confirm New Password" TextMode="Password"></asp:TextBox>
+                           
+                            
                         </div>
                         <div class="d-grid gap-2">
-                            <asp:Button class="btn btn-primary" ID="changeuserpassword" runat="server" Text="Change Password" />
+                            <asp:Button class="btn btn-primary" ID="changeuserpassword" runat="server" Text="Change Password" OnClick="changeuserpassword_Click" />
                             <asp:Button class="btn btn-light" ID="backtologin" runat="server" Text="<- Back to Login" />
                         </div>
                     </div>

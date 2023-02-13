@@ -39,7 +39,10 @@ namespace maxdth
                         Session["fullname"] = reader.GetValue(4).ToString();
                         Session["usertype"] = reader.GetValue(3).ToString();
                         Session["userphoto"] = reader.GetValue(8).ToString();
-
+                        Session["useremail"] = reader.GetValue(5).ToString();
+                        Session["userphone"] = reader.GetValue(6).ToString();
+                        Session["useraddress"] = reader.GetValue(7).ToString();
+                        Session["password"] = reader.GetValue(2).ToString();
                     }
                     Response.Redirect("maxhome.aspx");
                 }

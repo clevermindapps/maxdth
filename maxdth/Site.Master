@@ -62,11 +62,11 @@
                                     </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <asp:LinkButton class="dropdown-item" ID="userprofile" runat="server"><i class="bx bx-user"></i><span>Profile</span></asp:LinkButton>
+                                    <asp:LinkButton class="dropdown-item" ID="userprofile" runat="server" OnClick="userprofile_Click"><i class="bx bx-user"></i><span>Profile</span></asp:LinkButton>
 
                                     <div class="dropdown-divider mb-0"></div>
 
-                                    <asp:LinkButton class="dropdown-item" ID="userpassword" runat="server"><i class="bx bx-key"></i><span>Change Password</span></asp:LinkButton>
+                                    <asp:LinkButton class="dropdown-item" ID="userpassword" runat="server" OnClick="userpassword_Click"><i class="bx bx-key"></i><span>Change Password</span></asp:LinkButton>
 
                                     <div class="dropdown-divider mb-0"></div>
 

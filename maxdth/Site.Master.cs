@@ -56,7 +56,17 @@ namespace maxdth
             Session["fullname"] = "";
             Session["usertype"] = "";
             Session["userphoto"] = "";
-            Response.Redirect("default.aspx");
+            Response.Redirect("Default.aspx");
+        }
+        // user profile button//
+        protected void userprofile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userprofile.aspx");
+        }
+        // changepassword button//
+        protected void userpassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("changepassword.aspx");
         }
     }
 }

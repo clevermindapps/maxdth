@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,9 +10,24 @@ namespace maxdth
 {
     public partial class userprofile : System.Web.UI.Page
     {
+        string strconn = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            profileimage.ImageUrl = "https://maxdth.com/theme/images/avatars/suman.png";
+            try
+            {
+                profileimage.ImageUrl = Session["userphoto"].ToString();
+                fullname.Text = Session["fullname"].ToString();
+                role.Text = Session["usertype"].ToString();
+                email.Text = Session["useremail"].ToString();
+                phone.Text = Session["userphone"].ToString();
+                address.Text = Session["useraddress"].ToString();
+            }
+            catch(Exception ex)
+            {
+                Response.Write(ex.Message);
+            }
+           
         }
     }
 }
