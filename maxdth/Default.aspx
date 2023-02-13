@@ -9,8 +9,7 @@
                     <div class="col mx-auto">
                         <div class="mb-4 text-center">
                             <br />
-                            <br />
-                            <img src="theme/images/logo.png" height="60" />
+                            <img src="theme/images/maxlogo.png" height="48" />
                         </div>
                         <div class="card">
                             <div class="card-body">
