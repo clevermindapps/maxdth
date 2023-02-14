@@ -9,21 +9,24 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-info">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div>
-                                            <%--1--%>
-                                            <p class="text-info">Add Task</p>
-                                        </div>
-                                        <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto">
-                                            <i class='bx bx-plus'></i>
+                                <asp:LinkButton ID="addtask" runat="server" OnClick="addtask_Click">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <%--1--%>
+                                                <p class="text-info">Add Task</p>
+                                            </div>
+                                            <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto">
+                                                <i class='bx bx-plus'></i>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </asp:LinkButton>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-danger">
+                                <asp:LinkButton ID="pendingtasks" runat="server" OnClick="pendingtasks_Click">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>
@@ -35,6 +38,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                </asp:LinkButton>
                             </div>
                         </div>
                     </div>
@@ -43,6 +47,7 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-warning">
+                                <asp:LinkButton ID="modifytask" runat="server" OnClick="modifytask_Click">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>
@@ -54,6 +59,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                </asp:LinkButton>
                             </div>
                         </div>
                         <div class="col-6">

@@ -13,5 +13,20 @@ namespace maxdth
         {
 
         }
+
+        protected void addtask_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("addtask.aspx");
+        }
+
+        protected void pendingtasks_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("pendingtasks.aspx");
+        }
+
+        protected void modifytask_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("modifytask.aspx");
+        }
     }
 }
