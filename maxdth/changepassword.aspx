@@ -38,7 +38,7 @@
                         </div>
                         <div class="d-grid gap-2">
                             <asp:Button class="btn btn-primary" ID="changeuserpassword" runat="server" Text="Change Password" OnClick="changeuserpassword_Click" />
-                            <asp:Button class="btn btn-light" ID="backtologin" runat="server" Text="<- Back to Login" />
+                            
                         </div>
                     </div>
                 </div>
