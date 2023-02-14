@@ -706,6 +706,7 @@
     <Content Include="theme\images\avatars\avatar-8.png" />
     <Content Include="theme\images\avatars\avatar-9.png" />
     <Content Include="theme\images\avatars\cmsemp.png" />
+    <Content Include="theme\images\avatars\pahim.png" />
     <Content Include="theme\images\avatars\profilepic.png" />
     <Content Include="theme\images\avatars\suman.png" />
     <Content Include="theme\images\bg-themes\1.png" />

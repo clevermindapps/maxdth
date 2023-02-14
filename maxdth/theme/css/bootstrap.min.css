@@ -32,12 +32,14 @@
     --bs-secondary: #6c757d;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
+    --bs-purple-rgb: #8e2de2;
     --bs-warning: #ffc107;
     --bs-danger: #dc3545;
     --bs-light: #f8f9fa;
     --bs-dark: #212529;
     --bs-primary-rgb: 13,110,253;
     --bs-secondary-rgb: 108,117,125;
+    --bs-purple-rgb: 142, 45, 226;
     --bs-success-rgb: 25,135,84;
     --bs-info-rgb: 13,202,240;
     --bs-warning-rgb: 255,193,7;

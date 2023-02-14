@@ -17,13 +17,23 @@ namespace maxdth
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            logo.Visible = false;
+            userimage.Visible = false;
+            userfullname.Visible = false;
+            userrole.Visible = false;
             try
             {
-
-
-                if (Session["usertype"].Equals("employee"))
+                if(Session["usertype"].Equals(""))
                 {
-                    
+                    logo.Visible= false;
+                }
+
+                else if (Session["usertype"].Equals("employee"))
+                {
+                    logo.Visible= true;
+                    userimage.Visible = true;
+                    userfullname.Visible = true;
+                    userrole.Visible = true;
                     userimage.ImageUrl = Session["userphoto"].ToString();
 
                     userfullname.Text = Session["fullname"].ToString();
@@ -31,7 +41,10 @@ namespace maxdth
                 }
                 else if(Session["usertype"].Equals("admin"))
                 {
-                    
+                    logo.Visible = true;
+                    userimage.Visible = true;
+                    userfullname.Visible = true;
+                    userrole.Visible = true;
                     userimage.ImageUrl = Session["userphoto"].ToString();
                     userfullname.Text = Session["fullname"].ToString();
                     userrole.Text = "Admin";
@@ -67,6 +80,11 @@ namespace maxdth
         protected void userpassword_Click(object sender, EventArgs e)
         {
             Response.Redirect("changepassword.aspx");
+        }
+
+        protected void logo_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("maxhome.aspx");
         }
     }
 }

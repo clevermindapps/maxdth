@@ -33,11 +33,17 @@ namespace maxdth
                         SqlCommand com = new SqlCommand("update user_tbl set password='" + confirmnewpassword.Text + "'" + " where userid='" + Session["userid"].ToString() + "'",con);
                         com.ExecuteNonQuery();
                         con.Close();
-                        Response.Write("<script>alert('Password changed successfully')</script>");
+                        
 
+                        SqlConnection conn = new SqlConnection(strconn);
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand("update user_tbl set modifiedby='" + Session["fullname"].ToString() + "'" + " where userid='" + Session["userid"].ToString() + "'", conn);
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
                         oldpassword.Text = "";
                         newpassword.Text = "";
                         confirmnewpassword.Text = "";
+                        Response.Write("<script>alert('Password changed successfully')</script>");
                     }
                     else
                     {

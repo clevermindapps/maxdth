@@ -62,7 +62,7 @@
                                     <div class="d-flex align-items-center">
                                         <div>
                                             <%--4--%>
-                                            <p class="text-success">New Connection</p>
+                                            <p class="text-success">NewConection</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto">
                                             <i class="bx bx-globe-alt"></i>
@@ -96,7 +96,7 @@
                                     <div class="d-flex align-items-center">
                                         <div>
                                             <%--6--%>
-                                            <p class="text-danger">Recharge Entry</p>
+                                            <p class="text-danger">Rechrge Entry</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-burning text-white ms-auto">
                                             <i class='bx bx-recycle'></i>
@@ -168,10 +168,10 @@
                                     <div class="d-flex align-items-center">
                                         <div>
                                             <%--2/4--%>
-                                            <p class="text-secondary">Travel Report</p>
+                                            <p style="color:#8e2de2">Travel Report</p>
                                         </div>
-                                        <div class="widgets-icons-2 rounded-circle bg-gradient-moonlit text-white ms-auto">
-                                            <i class="bx bx-notepad"></i>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-cosmic text-white ms-auto">
+                                            <i class="bx bx-calculator"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -187,7 +187,7 @@
                                     <div class="d-flex align-items-center">
                                         <div>
                                             <%--2/5--%>
-                                            <p class="text-pink">Trvl Pay Report</p>
+                                            <p class="text-pink">Travl Payment</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-ibiza text-white ms-auto">
                                             <i class='bx bx-rupee'></i>
@@ -202,10 +202,10 @@
                                     <div class="d-flex align-items-center">
                                         <div>
                                             <%--2/6--%>
-                                            <p class="text-info">Atednc Report</p>
+                                            <p class="text-info">DTH Packs</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto">
-                                            <i class='bx bx-id-card'></i>
+                                            <i class='bx bx-desktop'></i>
                                         </div>
                                     </div>
                                 </div>

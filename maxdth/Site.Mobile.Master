@@ -35,7 +35,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form runat="server">
         <!--wrapper-->
         <div class="wrapper">
             <!--start header wrapper-->
@@ -45,9 +45,7 @@
                     <div class="topbar d-flex align-items-center">
                         <nav class="navbar navbar-expand">
                             <div>
-                                <a href="default.aspx">
-                                    <img src="theme/images/logo.png" alt="logo icon" width="120" height="30" />
-                                </a>
+                                <asp:LinkButton ID="logo" runat="server" OnClick="logo_Click" ><img src="theme/images/logo.png" alt="logo icon" width="120" height="30" /></asp:LinkButton>
                             </div>
 
                             <div class="top-menu ms-auto">
@@ -64,15 +62,15 @@
                                     </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <asp:LinkButton class="dropdown-item" ID="userprofile" runat="server"><i class="bx bx-user"></i><span>Profile</span></asp:LinkButton>
+                                    <asp:LinkButton class="dropdown-item" ID="userprofile" runat="server" OnClick="userprofile_Click"><i class="bx bx-user"></i><span>Profile</span></asp:LinkButton>
 
                                     <div class="dropdown-divider mb-0"></div>
 
-                                    <asp:LinkButton class="dropdown-item" ID="userpassword" runat="server"><i class="bx bx-key"></i><span>Change Password</span></asp:LinkButton>
+                                    <asp:LinkButton class="dropdown-item" ID="userpassword" runat="server" onclick="userpassword_Click" ><i class="bx bx-key"></i><span>Change Password</span></asp:LinkButton>
 
                                     <div class="dropdown-divider mb-0"></div>
 
-                                    <asp:LinkButton class="dropdown-item" ID="userlogout" runat="server"><i class='bx bx-log-out-circle'></i><span>Logout</span></asp:LinkButton>
+                                    <asp:LinkButton class="dropdown-item" ID="userlogout" runat="server" onclick="userlogout_Click" ><i class='bx bx-log-out-circle'></i><span>Logout</span></asp:LinkButton>
 
                                 </div>
                             </div>
@@ -94,6 +92,19 @@
                 <asp:ContentPlaceHolder runat="server" ID="MainContent" />
             </section>
             <friendlyUrls:ViewSwitcher runat="server" />
+
+            <!--**********************************
+                        Footer start
+                    ***********************************-->
+            <div>
+                <footer class="page-footer">
+                    <p class="mb-0">&copy; <%= DateTime.Now.Year.ToString() %> <b>MAX Enterprises</b>.&ensp;&ensp;&ensp;&ensp;Powered by <a href="http://www.clevermind.com/">CleverMind</a></p>
+                </footer>
+            </div>
+            <!--**********************************
+                        Footer end
+                    ***********************************-->
+
         </div>
 
         <!-- Bootstrap JS -->

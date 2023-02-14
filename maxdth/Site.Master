@@ -43,9 +43,7 @@
                     <div class="topbar d-flex align-items-center">
                         <nav class="navbar navbar-expand">
                             <div>
-                                <a href="default.aspx">
-                                    <img src="theme/images/logo.png" alt="logo icon" width="120" height="30" />
-                                </a>
+                                <asp:LinkButton ID="logo" runat="server" OnClick="logo_Click"><img src="theme/images/logo.png" alt="logo icon" width="120" height="30" /></asp:LinkButton>
                             </div>
 
                             <div class="top-menu ms-auto">
