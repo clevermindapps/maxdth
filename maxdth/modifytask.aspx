@@ -33,7 +33,7 @@
                                 <asp:ListItem Text="True" Value="True"></asp:ListItem>
                                 <asp:ListItem Text="False" Value="False"></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="*Required Field" ControlToValidate="isactive"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="*Required Field" ControlToValidate="isactive" ValidationGroup="modifytaskgroup"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Task Status</label>
@@ -42,7 +42,7 @@
                                 <asp:ListItem Text="In Progress" Value="In Progress" />
                                 <asp:ListItem Text="Completed" Value="Completed" />
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*Required Field" ControlToValidate="taskstatus"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*Required Field" ControlToValidate="taskstatus" ValidationGroup="modifytaskgroup"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Task Name</label>
@@ -57,31 +57,31 @@
                                     <asp:ListItem Text="Accessories" Value="Accessories" />
                                     <asp:ListItem Text="Pending Amount" Value="Pending Amount" />
                                 </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*Required Field" ControlToValidate="taskname"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*Required Field" ControlToValidate="taskname" ValidationGroup="modifytaskgroup"></asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Customer Name</label>
                             <!--TextBox-->
                             <asp:TextBox CssClass="form-control" ID="customername" runat="server" placeholder="Customer Name"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Required Field" ControlToValidate="customername"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Required Field" ControlToValidate="customername" ValidationGroup="modifytaskgroup"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Customer Phone Number</label>
                             <!--TextBox-->
                             <asp:TextBox CssClass="form-control" ID="customerphone" runat="server" placeholder="Customer Phone Number"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*Required Field" ControlToValidate="customerphone"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*Required Field" ControlToValidate="customerphone" ValidationGroup="modifytaskgroup"></asp:RequiredFieldValidator>
                         </div>
 						<div class="mb-3">
                             <label class="form-label">Customer Area</label>
                             <!--TextBox-->
                             <asp:TextBox CssClass="form-control" ID="customerarea" runat="server" placeholder="Customer Area"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*Required Field" ControlToValidate="customerarea"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*Required Field" ControlToValidate="customerarea" ValidationGroup="modifytaskgroup"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Amount Collected</label>
                             <asp:TextBox CssClass="form-control" ID="amount" runat="server" placeholder="Amount"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*Required Field" ControlToValidate="amount"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*Required Field" ControlToValidate="amount" ValidationGroup="modifytaskgroup"></asp:RequiredFieldValidator>
                         </div>
 						<div class="mb-3">
                             <label class="form-label">Remarks</label>
@@ -90,7 +90,7 @@
                         </div>
                         <div class="d-grid gap-2">
                             <!--Button-->
-                            <asp:Button CssClass="form-control btn btn-primary" ID="modifytaskbutton" runat="server" Text="Modify Task" OnClick="modifytaskbutton_Click" />
+                            <asp:Button CssClass="form-control btn btn-primary" ID="modifytaskbutton" runat="server" Text="Modify Task" OnClick="modifytaskbutton_Click" ValidationGroup="modifytaskgroup" />
                         </div>
                     </div>
                 </div>
