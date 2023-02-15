@@ -121,6 +121,7 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-info">
+                                <asp:LinkButton ID="attendance" runat="server" OnClick="attendance_Click">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>
@@ -132,6 +133,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                </asp:LinkButton>
                             </div>
                         </div>
                         <div class="col-6">
@@ -174,7 +176,7 @@
                                     <div class="d-flex align-items-center">
                                         <div>
                                             <%--2/4--%>
-                                            <p style="color:#8e2de2">Travel Report</p>
+                                            <p style="color: #8e2de2">Travel Report</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-cosmic text-white ms-auto">
                                             <i class="bx bx-calculator"></i>

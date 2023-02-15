@@ -58,7 +58,7 @@
                         </div>
                         <div class="d-grid gap-2">
                             <!--Button-->
-                            <asp:Button CssClass="form-control btn btn-primary" ID="addtaskbutton" runat="server" Text="Add Task" />
+                            <asp:Button CssClass="form-control btn btn-primary" ID="addtaskbutton" runat="server" Text="Add Task" OnClick="addtaskbutton_Click" />
                         </div>
                     </div>
                 </div>

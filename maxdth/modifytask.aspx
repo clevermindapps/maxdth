@@ -17,14 +17,23 @@
                         <center>
                             <h4 class="mt-3 font-weight-bold">Modify Task</h4>
                         </center>
+                        
                         <div class="mb-3 mt-3">
                             <label class="form-label">Task ID</label>
                             <div class="form-group">
                                 <div class="input-group">
-                                    <asp:TextBox CssClass="form-control" ID="taskid" runat="server" placeholder="Task ID"></asp:TextBox>
-                                    <asp:Button CssClass="btn btn-primary" ID="taskidbutton" runat="server" Text="Get Task Details" CausesValidation="False" />
+                                    <asp:TextBox CssClass="form-control" ID="taskid" runat="server" placeholder="Task ID" TextMode="Number"></asp:TextBox>
+                                    <asp:Button CssClass="btn btn-primary" ID="taskidbutton" runat="server" Text="Get Task Details" CausesValidation="False" OnClick="taskidbutton_Click" />
                                 </div>
                             </div>
+                        </div>
+                        <div class="mb-3">
+                             <label class="form-label">Is Active</label>
+                            <asp:DropDownList CssClass="form-control" ID="isactive" runat="server">
+                                <asp:ListItem Text="True" Value="True"></asp:ListItem>
+                                <asp:ListItem Text="False" Value="False"></asp:ListItem>
+                            </asp:DropDownList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="*Required Field" ControlToValidate="isactive"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Task Status</label>
@@ -81,7 +90,7 @@
                         </div>
                         <div class="d-grid gap-2">
                             <!--Button-->
-                            <asp:Button CssClass="form-control btn btn-primary" ID="modifytaskbutton" runat="server" Text="Modify Task" />
+                            <asp:Button CssClass="form-control btn btn-primary" ID="modifytaskbutton" runat="server" Text="Modify Task" OnClick="modifytaskbutton_Click" />
                         </div>
                     </div>
                 </div>

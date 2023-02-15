@@ -26,24 +26,33 @@ namespace maxdth
 
                 if (Session["password"].ToString()==oldpassword.Text)
                 {
+
                     if (newpassword.Text == confirmnewpassword.Text)
                     {
-                        SqlConnection con = new SqlConnection(strconn);
-                        con.Open();
-                        SqlCommand com = new SqlCommand("update user_tbl set password='" + confirmnewpassword.Text + "'" + " where userid='" + Session["userid"].ToString() + "'",con);
-                        com.ExecuteNonQuery();
-                        con.Close();
-                        
+                        if(oldpassword.Text != confirmnewpassword.Text)
+                        {
+                            SqlConnection con = new SqlConnection(strconn);
+                            con.Open();
+                            SqlCommand com = new SqlCommand("update user_tbl set password='" + confirmnewpassword.Text + "'" + " where userid='" + Session["userid"].ToString() + "'", con);
+                            com.ExecuteNonQuery();
+                            con.Close();
 
-                        SqlConnection conn = new SqlConnection(strconn);
-                        conn.Open();
-                        SqlCommand cmd = new SqlCommand("update user_tbl set modifiedby='" + Session["fullname"].ToString() + "'" + " where userid='" + Session["userid"].ToString() + "'", conn);
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
-                        oldpassword.Text = "";
-                        newpassword.Text = "";
-                        confirmnewpassword.Text = "";
-                        Response.Write("<script>alert('Password changed successfully')</script>");
+
+                            SqlConnection conn = new SqlConnection(strconn);
+                            conn.Open();
+                            SqlCommand cmd = new SqlCommand("update user_tbl set modifiedby='" + Session["fullname"].ToString() + "'" + " where userid='" + Session["userid"].ToString() + "'", conn);
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                            oldpassword.Text = "";
+                            newpassword.Text = "";
+                            confirmnewpassword.Text = "";
+                            Response.Write("<script>alert('Password changed successfully')</script>");
+                        }
+                        else
+                        {
+                            Response.Write("<script>alert('New Password is same as Old Password')</script>");
+                        }
+                       
                     }
                     else
                     {
