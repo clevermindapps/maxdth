@@ -51,9 +51,9 @@ namespace maxdth
                 customerarea.Text = "";
                 remarks.Text = "";
             }
-            catch(Exception ex)
+            catch(Exception)
             {
-                Response.Write(ex.Message);
+                Response.Write("<Script>alert('Task Not Added')</script>");
 
             }
            

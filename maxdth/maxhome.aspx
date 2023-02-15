@@ -9,7 +9,7 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-info">
-                                <asp:LinkButton ID="addtask" runat="server" OnClick="addtask_Click">
+                                <asp:LinkButton ID="addtask" runat="server" OnClick="addtask_Click" CausesValidation="False">
                                     <div class="card-body">
                                         <div class="d-flex align-items-center">
                                             <div>
@@ -26,7 +26,7 @@
                         </div>
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-danger">
-                                <asp:LinkButton ID="pendingtasks" runat="server" OnClick="pendingtasks_Click">
+                                <asp:LinkButton ID="pendingtasks" runat="server" OnClick="pendingtasks_Click" CausesValidation="False">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>
@@ -47,7 +47,7 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-warning">
-                                <asp:LinkButton ID="modifytask" runat="server" OnClick="modifytask_Click">
+                                <asp:LinkButton ID="modifytask" runat="server" OnClick="modifytask_Click" CausesValidation="False">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>
@@ -121,7 +121,7 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-info">
-                                <asp:LinkButton ID="attendance" runat="server" OnClick="attendance_Click">
+                                <asp:LinkButton ID="attendance" runat="server" OnClick="attendance_Click" CausesValidation="False">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>

@@ -52,18 +52,13 @@ namespace maxdth
                     else
                     {
                         Response.Write("<Script>alert('Please Enter Correct Task ID ')</script>");
-                    }
-                    
+                    } 
                        
                 }
-                else
-                {
-                    Response.Write("<Script>alert('Please Enter Correct Task ID ')</script>");
-                }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Response.Write(ex.Message);
+                Response.Write("<Script>alert('Please Enter Correct Task ID ')</script>");
             }
         }
 
@@ -103,9 +98,9 @@ namespace maxdth
                 remarks.Text = "";
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Response.Write(ex.Message);
+                Response.Write("<Script>alert('Task Not Modified')</script>");
 
             }
         }
