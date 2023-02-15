@@ -13,9 +13,9 @@ namespace maxdth
     public partial class maxhome : System.Web.UI.Page
     {
         string strconn = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
-        string attendanceid = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString("MM") + DateTime.Now.Day.ToString("dd");
-        string monthcode = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString("MM");
-        
+        string yyyymmdd = DateTime.Now.Year.ToString() + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd");
+        string monthcode = DateTime.Now.Year.ToString() + DateTime.Now.ToString("MM");
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -40,13 +40,13 @@ namespace maxdth
         {
             try
             {
-                string attendanceidfinal = Session["userid"].ToString() + attendanceid;
+                string attendanceid = Session["userid"].ToString() + yyyymmdd;
                 SqlConnection con = new SqlConnection(strconn);
                 con.Open();
                 SqlCommand cmd = new SqlCommand("INSERT INTO attendance_tbl(isactive,attendanceid,monthcode,userfullname,fulldayorhalfday,isonleave) values(@isactive,@attendanceid,@monthcode,@userfullname,@fulldayorhalfday,@isonleave)", con);
 
                 cmd.Parameters.AddWithValue("@isactive", "1");
-                cmd.Parameters.AddWithValue("@attendanceid", attendanceidfinal);
+                cmd.Parameters.AddWithValue("@attendanceid", attendanceid);
                 cmd.Parameters.AddWithValue("@monthcode", Convert.ToInt32(monthcode));
                 cmd.Parameters.AddWithValue("@userfullname", Session["fullname"].ToString());
                 cmd.Parameters.AddWithValue("@fulldayorhalfday", "1");
@@ -56,12 +56,13 @@ namespace maxdth
                 con.Close();
 
                 Response.Write("<Script>alert('Attendence Submited Successfully')</script>");
+
             }
-            catch(Exception ex)
+            catch (Exception)
             {
-                Response.Write(ex.Message);
+                Response.Write("<Script>alert('Attendence Already Submited')</script>");
             }
-           
+
         }
     }
 }
