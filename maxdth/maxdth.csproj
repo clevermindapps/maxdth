@@ -116,6 +116,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="empattendancereport.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -708,7 +709,9 @@
     <Content Include="theme\images\avatars\avatar-7.png" />
     <Content Include="theme\images\avatars\avatar-8.png" />
     <Content Include="theme\images\avatars\avatar-9.png" />
+    <Content Include="theme\images\avatars\basheer.png" />
     <Content Include="theme\images\avatars\cmsemp.jpg" />
+    <Content Include="theme\images\avatars\jaheem.png" />
     <Content Include="theme\images\avatars\pahim.png" />
     <Content Include="theme\images\avatars\profilepic.png" />
     <Content Include="theme\images\avatars\suman.png" />
@@ -959,6 +962,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="empattendancereport.aspx.cs">
+      <DependentUpon>empattendancereport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="empattendancereport.aspx.designer.cs">
+      <DependentUpon>empattendancereport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
