@@ -33,7 +33,7 @@ namespace maxdth
                 cmd.Parameters.AddWithValue("@taskstatus", "Pending");
                 cmd.Parameters.AddWithValue("@taskname", taskname.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@custname", customername.Text.Trim());
-                cmd.Parameters.AddWithValue("@custphone", Convert.ToInt32(customerphone.Text.Trim()));
+                cmd.Parameters.AddWithValue("@custphone", customerphone.Text.Trim());
                 cmd.Parameters.AddWithValue("@custarea", customerarea.Text.Trim());
                 cmd.Parameters.AddWithValue("@amount", "0");
                 cmd.Parameters.AddWithValue("@remarks", remarks.Text.Trim());
