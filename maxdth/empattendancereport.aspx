@@ -7,13 +7,13 @@
                 <br />
                 <h5 style="color:red">Monthly Attendance Report</h5>
                 <br />
-                <asp:DropDownList ID="empmonthcode" runat="server" DataSourceID="empmonthds" DataTextField="monthname" DataValueField="monthcode" OnSelectedIndexChanged="empmonthcode_SelectedIndexChanged">
+                <asp:DropDownList ID="empmonthcode" runat="server" DataSourceID="empmonthds" DataTextField="monthname" DataValueField="monthcode" OnSelectedIndexChanged="empmonthcode_SelectedIndexChanged" AutoPostBack="True">
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="empmonthds" runat="server" ConnectionString="<%$ ConnectionStrings:maxdbConnectionString %>" SelectCommand="SELECT * FROM [monthcode_tbl]"></asp:SqlDataSource>
                 <hr />
-                <asp:GridView ID="empmonthlyattendance" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="attendanceid" DataSourceID="empmonthlyattendenceds" PageSize="32">
+                <asp:GridView ID="empmonthlyattendance" runat="server" AllowPaging="True" AllowSorting="True" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="attendanceid" PageSize="32">
                     <Columns>
-                        <asp:CheckBoxField DataField="isactive" HeaderText="isactive" SortExpression="isactive" />
+                        <asp:CheckBoxField DataField="isactive" Text="Is Active"   SortExpression="isactive" />
                         <asp:BoundField DataField="attendanceid" HeaderText="attendanceid" ReadOnly="True" SortExpression="attendanceid" />
                         <asp:BoundField DataField="monthcode" HeaderText="monthcode" SortExpression="monthcode" />
                         <asp:BoundField DataField="userfullname" HeaderText="userfullname" SortExpression="userfullname" />
@@ -34,14 +34,6 @@
                     <SortedDescendingCellStyle BackColor="#F1E5CE" />
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
-
-                <asp:SqlDataSource ID="empmonthlyattendenceds" runat="server" ConnectionString="<%$ ConnectionStrings:maxdbConnectionString %>" SelectCommand="SELECT * FROM [attendance_tbl] WHERE (([userfullname] = @userfullname) AND ([isactive] = @isactive) AND ([monthcode] = @monthcode))">
-                    <SelectParameters>
-                        <asp:SessionParameter Name="userfullname" SessionField="fullname" Type="String" />
-                        <asp:Parameter DefaultValue="True" Name="isactive" Type="Boolean" />
-                        <asp:FormParameter DefaultValue="202302" FormField="empmonthcode" Name="monthcode" Type="Int32" />
-                    </SelectParameters>
-                </asp:SqlDataSource>
             </div>
             <div>
                 <br />
@@ -50,16 +42,16 @@
                 <asp:GridView CssClass="table-responsive" ID="empattendance" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="attendanceid" DataSourceID="empattendanceds" ForeColor="#333333" GridLines="None">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:CheckBoxField DataField="isactive" HeaderText="isactive" SortExpression="isactive" />
-                        <asp:BoundField DataField="attendanceid" HeaderText="attendanceid" ReadOnly="True" SortExpression="attendanceid" />
-                        <asp:BoundField DataField="monthcode" HeaderText="monthcode" SortExpression="monthcode" />
-                        <asp:BoundField DataField="userfullname" HeaderText="userfullname" SortExpression="userfullname" />
-                        <asp:BoundField DataField="datetime" HeaderText="datetime" SortExpression="datetime" />
-                        <asp:BoundField DataField="fulldayorhalfday" HeaderText="fulldayorhalfday" SortExpression="fulldayorhalfday" />
-                        <asp:CheckBoxField DataField="isonleave" HeaderText="isonleave" SortExpression="isonleave" />
-                        <asp:BoundField DataField="remarks" HeaderText="remarks" SortExpression="remarks" />
-                        <asp:BoundField DataField="modifiedby" HeaderText="modifiedby" SortExpression="modifiedby" />
-                        <asp:BoundField DataField="modifieddatetime" HeaderText="modifieddatetime" SortExpression="modifieddatetime" />
+                        <asp:CheckBoxField DataField="isactive"   SortExpression="isactive" />
+                        <asp:BoundField DataField="attendanceid"   ReadOnly="True" SortExpression="attendanceid" />
+                        <asp:BoundField DataField="monthcode"   SortExpression="monthcode" />
+                        <asp:BoundField DataField="userfullname"   SortExpression="userfullname" />
+                        <asp:BoundField DataField="datetime"   SortExpression="datetime" />
+                        <asp:BoundField DataField="fulldayorhalfday"   SortExpression="fulldayorhalfday" />
+                        <asp:CheckBoxField DataField="isonleave"   SortExpression="isonleave" />
+                        <asp:BoundField DataField="remarks"   SortExpression="remarks" />
+                        <asp:BoundField DataField="modifiedby"   SortExpression="modifiedby" />
+                        <asp:BoundField DataField="modifieddatetime"   SortExpression="modifieddatetime" />
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

@@ -13,6 +13,15 @@
             <br />
             <br />
             <asp:Label ID="yyyymmlable" runat="server" Text="Label"></asp:Label>
+            <br />
+            <br />
+            <h4>Gridview By Using Dropdown</h4>
+            <hr />
+            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
+            <br />
+            <br />
+            <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+
         </div>
     </div>
 </asp:Content>
