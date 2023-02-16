@@ -13,5 +13,10 @@ namespace maxdth
         {
 
         }
+
+        protected void empmonthcode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            empmonthlyattendance.DataBind();
+        }
     }
 }

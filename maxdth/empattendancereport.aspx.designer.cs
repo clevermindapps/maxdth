@@ -15,6 +15,42 @@ namespace maxdth
     {
 
         /// <summary>
+        /// empmonthcode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList empmonthcode;
+
+        /// <summary>
+        /// empmonthds control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource empmonthds;
+
+        /// <summary>
+        /// empmonthlyattendance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView empmonthlyattendance;
+
+        /// <summary>
+        /// empmonthlyattendenceds control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource empmonthlyattendenceds;
+
+        /// <summary>
         /// empattendance control.
         /// </summary>
         /// <remarks>
@@ -22,5 +58,14 @@ namespace maxdth
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView empattendance;
+
+        /// <summary>
+        /// empattendanceds control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource empattendanceds;
     }
 }

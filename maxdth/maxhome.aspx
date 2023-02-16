@@ -138,6 +138,7 @@
                         </div>
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-warning">
+                                <asp:LinkButton ID="empattendancereport" runat="server" OnClick="empattendancereport_Click">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>
@@ -149,6 +150,7 @@
                                         </div>
                                     </div>
                                 </div>
+                               </asp:LinkButton>
                             </div>
                         </div>
                     </div>
