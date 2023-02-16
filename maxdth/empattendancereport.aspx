@@ -11,47 +11,49 @@
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="empmonthds" runat="server" ConnectionString="<%$ ConnectionStrings:maxdbConnectionString %>" SelectCommand="SELECT * FROM [monthcode_tbl]"></asp:SqlDataSource>
                 <hr />
-                <asp:GridView ID="empmonthlyattendance" runat="server" AllowPaging="True" AllowSorting="True" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="attendanceid" PageSize="32">
+                <asp:GridView ID="empmonthlyattendance" runat="server" AllowPaging="True" AllowSorting="True" CellPadding="4" DataKeyNames="attendanceid" PageSize="32" AutoGenerateColumns="False" ForeColor="#333333" BorderStyle="Solid" BorderWidth="2" CssClass="table-bordered">
+                    <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:CheckBoxField DataField="isactive" Text="Is Active"   SortExpression="isactive" />
-                        <asp:BoundField DataField="attendanceid" HeaderText="attendanceid" ReadOnly="True" SortExpression="attendanceid" />
-                        <asp:BoundField DataField="monthcode" HeaderText="monthcode" SortExpression="monthcode" />
-                        <asp:BoundField DataField="userfullname" HeaderText="userfullname" SortExpression="userfullname" />
-                        <asp:BoundField DataField="datetime" HeaderText="datetime" SortExpression="datetime" />
-                        <asp:BoundField DataField="fulldayorhalfday" HeaderText="fulldayorhalfday" SortExpression="fulldayorhalfday" />
-                        <asp:CheckBoxField DataField="isonleave" HeaderText="isonleave" SortExpression="isonleave" />
-                        <asp:BoundField DataField="remarks" HeaderText="remarks" SortExpression="remarks" />
-                        <asp:BoundField DataField="modifiedby" HeaderText="modifiedby" SortExpression="modifiedby" />
-                        <asp:BoundField DataField="modifieddatetime" HeaderText="modifieddatetime" SortExpression="modifieddatetime" />
+                        <asp:CheckBoxField DataField="isactive"   SortExpression="isactive" HeaderText="Is Active" />
+                        <asp:BoundField DataField="attendanceid" HeaderText="Attendance ID" ReadOnly="True" SortExpression="attendanceid" />
+                        <asp:BoundField DataField="monthcode" HeaderText="Month Code" SortExpression="monthcode" />
+                        <asp:BoundField DataField="userfullname" HeaderText="Full Name" SortExpression="userfullname" />
+                        <asp:BoundField DataField="datetime" HeaderText="Submitted Date" SortExpression="datetime" />
+                        <asp:BoundField DataField="fulldayorhalfday" HeaderText="Fullday or Halfday" SortExpression="fulldayorhalfday" />
+                        <asp:CheckBoxField DataField="isonleave" HeaderText="Is Onleave" SortExpression="isonleave" />
+                        <asp:BoundField DataField="remarks" HeaderText="Remarks" SortExpression="remarks" />
+                        <asp:BoundField DataField="modifiedby" HeaderText="Modified By" SortExpression="modifiedby" />
+                        <asp:BoundField DataField="modifieddatetime" HeaderText="Modified Date Time" SortExpression="modifieddatetime" />
                     </Columns>
-                    <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-                    <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
-                    <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
-                    <SortedAscendingCellStyle BackColor="#FFF1D4" />
-                    <SortedAscendingHeaderStyle BackColor="#B95C30" />
-                    <SortedDescendingCellStyle BackColor="#F1E5CE" />
-                    <SortedDescendingHeaderStyle BackColor="#93451F" />
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" ForeColor="White" Font-Bold="True" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle ForeColor="White" HorizontalAlign="Center" BackColor="#2461BF" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
             </div>
             <div>
                 <br />
                 <h5 style="color:red">Overall Attendance Report</h5>
                 <hr />
-                <asp:GridView CssClass="table-responsive" ID="empattendance" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="attendanceid" DataSourceID="empattendanceds" ForeColor="#333333" GridLines="None">
+                <asp:GridView CssClass="table-bordered" ID="empattendance" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="attendanceid" DataSourceID="empattendanceds" ForeColor="#333333" BorderStyle="Solid" BorderWidth="2px">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:CheckBoxField DataField="isactive"   SortExpression="isactive" />
-                        <asp:BoundField DataField="attendanceid"   ReadOnly="True" SortExpression="attendanceid" />
-                        <asp:BoundField DataField="monthcode"   SortExpression="monthcode" />
-                        <asp:BoundField DataField="userfullname"   SortExpression="userfullname" />
-                        <asp:BoundField DataField="datetime"   SortExpression="datetime" />
-                        <asp:BoundField DataField="fulldayorhalfday"   SortExpression="fulldayorhalfday" />
-                        <asp:CheckBoxField DataField="isonleave"   SortExpression="isonleave" />
-                        <asp:BoundField DataField="remarks"   SortExpression="remarks" />
-                        <asp:BoundField DataField="modifiedby"   SortExpression="modifiedby" />
-                        <asp:BoundField DataField="modifieddatetime"   SortExpression="modifieddatetime" />
+                        <asp:CheckBoxField DataField="isactive"   SortExpression="isactive" HeaderText="Is Active" />
+                        <asp:BoundField DataField="attendanceid"   ReadOnly="True" SortExpression="attendanceid" HeaderText="Attendance ID" />
+                        <asp:BoundField DataField="monthcode"   SortExpression="monthcode" HeaderText="Month Code" />
+                        <asp:BoundField DataField="userfullname"   SortExpression="userfullname" HeaderText="Full Name" />
+                        <asp:BoundField DataField="datetime"   SortExpression="datetime" HeaderText="Submitted Date" />
+                        <asp:BoundField DataField="fulldayorhalfday"   SortExpression="fulldayorhalfday" HeaderText="Fullday or Halfday" />
+                        <asp:CheckBoxField DataField="isonleave"   SortExpression="isonleave" HeaderText="Is Onleave" />
+                        <asp:BoundField DataField="remarks"   SortExpression="remarks" HeaderText="Remarks" />
+                        <asp:BoundField DataField="modifiedby"   SortExpression="modifiedby" HeaderText="Modified By" />
+                        <asp:BoundField DataField="modifieddatetime"   SortExpression="modifieddatetime" HeaderText="Modified Date Time" />
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
