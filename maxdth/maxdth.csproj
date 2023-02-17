@@ -108,6 +108,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="addtask.aspx" />
+    <Content Include="addtrip.aspx" />
     <Content Include="changepassword.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -117,6 +118,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="empattendancereport.aspx" />
+    <Content Include="emptravelpayment.aspx" />
+    <Content Include="emptravelreport.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -933,6 +936,13 @@
     <Compile Include="addtask.aspx.designer.cs">
       <DependentUpon>addtask.aspx</DependentUpon>
     </Compile>
+    <Compile Include="addtrip.aspx.cs">
+      <DependentUpon>addtrip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addtrip.aspx.designer.cs">
+      <DependentUpon>addtrip.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -969,6 +979,20 @@
     </Compile>
     <Compile Include="empattendancereport.aspx.designer.cs">
       <DependentUpon>empattendancereport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="emptravelpayment.aspx.cs">
+      <DependentUpon>emptravelpayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="emptravelpayment.aspx.designer.cs">
+      <DependentUpon>emptravelpayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="emptravelreport.aspx.cs">
+      <DependentUpon>emptravelreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="emptravelreport.aspx.designer.cs">
+      <DependentUpon>emptravelreport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -56,7 +56,6 @@ namespace maxdth
                 Response.Write("<Script>alert('Task Not Added')</script>");
 
             }
-           
         }
     }
 }
