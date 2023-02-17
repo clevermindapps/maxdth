@@ -11,7 +11,7 @@
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="empmonthds" runat="server" ConnectionString="<%$ ConnectionStrings:maxdbConnectionString %>" SelectCommand="SELECT * FROM [monthcode_tbl]"></asp:SqlDataSource>
                 <hr />
-                <asp:GridView ID="empmonthlyattendance" runat="server" AllowPaging="True" AllowSorting="True" CellPadding="4" DataKeyNames="attendanceid" PageSize="32" AutoGenerateColumns="False" ForeColor="#333333" BorderStyle="Solid" BorderWidth="2" CssClass="table-bordered">
+                <asp:GridView ID="empmonthlyattendance" runat="server" AllowPaging="True" AllowSorting="True" CellPadding="4" DataKeyNames="attendanceid" PageSize="32" AutoGenerateColumns="False" ForeColor="#333333" BorderStyle="Solid" BorderWidth="2" CssClass="table-responsive table-bordered">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:CheckBoxField DataField="isactive"   SortExpression="isactive" HeaderText="Is Active" />
@@ -41,7 +41,7 @@
                 <br />
                 <h5 style="color:red">Overall Attendance Report</h5>
                 <hr />
-                <asp:GridView CssClass="table-bordered" ID="empattendance" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="attendanceid" DataSourceID="empattendanceds" ForeColor="#333333" BorderStyle="Solid" BorderWidth="2px">
+                <asp:GridView CssClass="table-responsive table-bordered" ID="empattendance" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="attendanceid" DataSourceID="empattendanceds" ForeColor="#333333" BorderStyle="Solid" BorderWidth="2px">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:CheckBoxField DataField="isactive"   SortExpression="isactive" HeaderText="Is Active" />

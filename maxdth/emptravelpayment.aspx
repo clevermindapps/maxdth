@@ -7,7 +7,7 @@
                 <br />
                 <h5 style="color:red">Travel Payment Report</h5>
                 <hr />
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="paymentid" DataSourceID="emptravelpaymentds" CellPadding="4" CssClass="table-bordered" ForeColor="#333333" GridLines="None">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="paymentid" DataSourceID="emptravelpaymentds" CellPadding="4" CssClass="table-responsive table-bordered" ForeColor="#333333" GridLines="None">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:CheckBoxField DataField="isactive" HeaderText="Is Active" SortExpression="isactive" />

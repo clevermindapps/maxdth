@@ -118,7 +118,7 @@
                 <br />
                 <h5 style="color:red">List of Pending Tasks</h5>
                 <br />
-                <asp:GridView CssClass="table-bordered table-responsive" ID="tasks" runat="server" OnSelectedIndexChanged="tasks_SelectedIndexChanged" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="taskid" DataSourceID="SqlDatapendingtasks" ForeColor="#333333" GridLines="Both" PagerStyle-BorderStyle="Solid" PagerStyle-BorderColor="#FF6600" AllowCustomPaging="True" PageSize="20" BorderStyle="Solid" BorderWidth="2">
+                <asp:GridView CssClass="table-responsive table-bordered" ID="tasks" runat="server" OnSelectedIndexChanged="tasks_SelectedIndexChanged" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="taskid" DataSourceID="SqlDatapendingtasks" ForeColor="#333333" GridLines="Both" PagerStyle-BorderStyle="Solid" PagerStyle-BorderColor="#FF6600" AllowCustomPaging="True" PageSize="20" BorderStyle="Solid" BorderWidth="2">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:CheckBoxField DataField="isactive" HeaderText="Is Active" SortExpression="isactive" />

@@ -7,7 +7,7 @@
                 <br />
                 <h5 style="color:red">Payment Pending Travel Report</h5>
                 <hr />
-                <asp:GridView ID="emppendingtravelreport" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="emptravelpendingDS" DataKeyNames="travelid" CellPadding="4" ForeColor="#333333" BorderStyle="Solid" BorderWidth="2" CssClass="table-bordered table-responsive">
+                <asp:GridView ID="emppendingtravelreport" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="emptravelpendingDS" DataKeyNames="travelid" CellPadding="4" ForeColor="#333333" BorderStyle="Solid" BorderWidth="2" CssClass="table-responsive table-bordered">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:CheckBoxField DataField="isactive" HeaderText="Is Active" SortExpression="isactive" />
@@ -47,7 +47,7 @@
                 <br />
                 <h5 style="color:Green">Payment Completed Travel Report</h5>
                 <hr />
-                <asp:GridView ID="empcompletedtravelreport" runat="server" AutoGenerateColumns="False" DataKeyNames="travelid" DataSourceID="emppaidtravelds" BorderStyle="Solid" CellPadding="4" ForeColor="#333333" GridLines="Both" BorderWidth="2" CssClass="table-bordered">
+                <asp:GridView ID="empcompletedtravelreport" runat="server" AutoGenerateColumns="False" DataKeyNames="travelid" DataSourceID="emppaidtravelds" BorderStyle="Solid" CellPadding="4" ForeColor="#333333" GridLines="Both" BorderWidth="2" CssClass="table-responsive table-bordered">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:CheckBoxField DataField="isactive" HeaderText="Is Active" SortExpression="isactive" />
