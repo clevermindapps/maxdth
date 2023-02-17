@@ -79,5 +79,10 @@ namespace maxdth
         {
             Response.Redirect("emptravelreport.aspx");
         }
+
+        protected void emptravelpayment_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("emptravelpayment.aspx");
+        }
     }
 }
