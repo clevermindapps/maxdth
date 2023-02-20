@@ -80,7 +80,7 @@ namespace maxdth
                             customerphone.Text = dr[4].ToString();
                             customerarea.Text = dr[5].ToString();
                             monthlyamount.Text = dr[6].ToString();
-                            duedate.Text = DateTime.Parse(dr[7].ToString("dd-MM-yyyy"));
+                            duedate.Text = dr[7].ToString();
                             remarks.Text = dr[8].ToString();
                         }
                     }
