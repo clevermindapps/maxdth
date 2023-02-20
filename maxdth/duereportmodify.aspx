@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="duereportmodify.aspx.cs" Inherits="maxdth.duereportmodify" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!-- wrapper -->
     <div class="wrapper">
@@ -75,4 +76,10 @@
                         <div class="d-grid gap-2">
                             <asp:Button CssClass="form-control btn btn-primary" ID="modifyduereportbutton" runat="server" Text="Modify Details" OnClick="modifyduereportbutton_Click" />
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </asp:Content>
