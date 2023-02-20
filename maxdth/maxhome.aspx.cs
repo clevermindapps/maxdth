@@ -84,5 +84,20 @@ namespace maxdth
         {
             Response.Redirect("emptravelpayment.aspx");
         }
+
+        protected void rechargeentry_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("duereportentry.aspx");
+        }
+
+        protected void rechargeduereport_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("rechargeduereport.aspx");
+        }
+
+        protected void modifyrecharge_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("duereportmodify.aspx");
+        }
     }
 }

@@ -21,6 +21,12 @@
             <br />
             <br />
             <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+            <br />
+            <hr />
+            <asp:TextBox ID="TextBox1" runat="server" TextMode="Date" OnLoad="TextBox1_Load"></asp:TextBox>
+            <br />
+            <hr />
+            <asp:GridView CssClass="table-responsive table-bordered" ID="GridView2" runat="server"></asp:GridView>
 
         </div>
     </div>

@@ -42,6 +42,33 @@ namespace maxdth
         protected global::System.Web.UI.WebControls.LinkButton modifytask;
 
         /// <summary>
+        /// rechargeduereport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton rechargeduereport;
+
+        /// <summary>
+        /// rechargeentry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton rechargeentry;
+
+        /// <summary>
+        /// modifyrecharge control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton modifyrecharge;
+
+        /// <summary>
         /// attendance control.
         /// </summary>
         /// <remarks>

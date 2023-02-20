@@ -54,5 +54,19 @@ namespace maxdth
             GridView1.DataBind();
             conn.Close();
         }
+
+        protected void TextBox1_Load(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(strconn);
+            conn.Open();
+            SqlCommand com = new SqlCommand("select * from duereport_tbl where duedate<=@duedate", conn);
+            com.Parameters.AddWithValue("@duedate", TextBox1.Text);
+            SqlDataAdapter sd = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            sd.Fill(dt);
+            GridView2.DataSource = dt;
+            GridView2.DataBind();
+            conn.Close();
+        }
     }
 }

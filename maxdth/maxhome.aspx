@@ -64,17 +64,19 @@
                         </div>
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-success">
+                                <asp:LinkButton ID="rechargeduereport" runat="server" OnClick="rechargeduereport_Click">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>
                                             <%--4--%>
-                                            <p class="text-success">NewConection</p>
+                                            <p class="text-success">Due Report</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto">
-                                            <i class="bx bx-globe-alt"></i>
+                                            <i class="bx bx-notepad"></i>
                                         </div>
                                     </div>
                                 </div>
+                                </asp:LinkButton>
                             </div>
                         </div>
                     </div>
@@ -83,32 +85,36 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-secondary">
+                                <asp:LinkButton ID="rechargeentry" runat="server" OnClick="rechargeentry_Click">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>
                                             <%--5--%>
-                                            <p class="text-secondary">Due Report</p>
+                                            <p class="text-secondary">Rechrge Entry</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-moonlit text-white ms-auto">
-                                            <i class='bx bx-notepad'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card radius-10 border-start border-0 border-3 border-danger">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div>
-                                            <%--6--%>
-                                            <p class="text-danger">Rechrge Entry</p>
-                                        </div>
-                                        <div class="widgets-icons-2 rounded-circle bg-gradient-burning text-white ms-auto">
                                             <i class='bx bx-recycle'></i>
                                         </div>
                                     </div>
                                 </div>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-danger">
+                                <asp:LinkButton ID="modifyrecharge" runat="server" OnClick="modifyrecharge_Click">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <%--6--%>
+                                            <p class="text-danger">Modfy Rechrg</p>
+                                        </div>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-burning text-white ms-auto">
+                                            <i class='bx bx-edit'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                </asp:LinkButton>
                             </div>
                         </div>
                     </div>
@@ -218,10 +224,10 @@
                                     <div class="d-flex align-items-center">
                                         <div>
                                             <%--2/6--%>
-                                            <p class="text-info">DTH Packs</p>
+                                            <p class="text-info">NewConection</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto">
-                                            <i class='bx bx-desktop'></i>
+                                            <i class='bx bx-globe-alt'></i>
                                         </div>
                                     </div>
                                 </div>
