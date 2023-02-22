@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="adddealer.aspx" />
     <Content Include="addtask.aspx" />
     <Content Include="addtrip.aspx" />
     <Content Include="changepassword.aspx" />
@@ -116,6 +117,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="dealerslist.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="duereportentry.aspx" />
     <Content Include="duereportmodify.aspx" />
@@ -135,6 +137,7 @@
     <None Include="Properties\PublishProfiles\maxdth.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="maxhome.aspx" />
+    <Content Include="modifydealer.aspx" />
     <Content Include="modifytask.aspx" />
     <Content Include="newconnectionentry.aspx" />
     <Content Include="pendingtasks.aspx" />
@@ -933,6 +936,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adddealer.aspx.cs">
+      <DependentUpon>adddealer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adddealer.aspx.designer.cs">
+      <DependentUpon>adddealer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="addtask.aspx.cs">
       <DependentUpon>addtask.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -969,6 +979,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealerslist.aspx.cs">
+      <DependentUpon>dealerslist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealerslist.aspx.designer.cs">
+      <DependentUpon>dealerslist.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -1021,6 +1038,13 @@
     </Compile>
     <Compile Include="maxhome.aspx.designer.cs">
       <DependentUpon>maxhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modifydealer.aspx.cs">
+      <DependentUpon>modifydealer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modifydealer.aspx.designer.cs">
+      <DependentUpon>modifydealer.aspx</DependentUpon>
     </Compile>
     <Compile Include="modifytask.aspx.cs">
       <DependentUpon>modifytask.aspx</DependentUpon>
