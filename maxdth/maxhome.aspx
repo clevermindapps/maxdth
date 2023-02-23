@@ -156,7 +156,7 @@
                                         </div>
                                     </div>
                                 </div>
-                               </asp:LinkButton>
+                                </asp:LinkButton>
                             </div>
                         </div>
                     </div>
@@ -215,7 +215,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                    </asp:LinkButton>
+                                </asp:LinkButton>
                             </div>
                         </div>
                         <div class="col-6">
@@ -231,6 +231,242 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end row-->
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-info">
+                                <asp:LinkButton ID="connectionmonthlyreport" runat="server" OnClick="connectionmonthlyreport_Click" CausesValidation="False">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <%--3/1--%>
+                                                <p class="text-info">ConMthly Rep</p>
+                                            </div>
+                                            <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto">
+                                                <i class='bx bx-book-content'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-danger">
+                                <asp:LinkButton ID="overallgraph" runat="server" OnClick="overallgraph_Click" CausesValidation="False">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <%--3/2--%>
+                                            <p class="text-danger">Conn Graph</p>
+                                        </div>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-bloody text-white ms-auto">
+                                            <i class='bx bx-bar-chart-square'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-warning">
+                                <asp:LinkButton ID="adminempattendancereport" runat="server" OnClick="adminempattendancereport_Click" CausesValidation="False">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <%--3/3--%>
+                                            <p class="text-warning">Emp Atndnce</p>
+                                        </div>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-blooker text-white ms-auto">
+                                            <i class='bx bx-columns'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-success">
+                                <asp:LinkButton ID="adminmodifyattendance" runat="server" OnClick="adminmodifyattendance_Click" CausesValidation="False">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <%--3/4--%>
+                                            <p class="text-success">Modify Atend</p>
+                                        </div>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto">
+                                            <i class="bx bx-revision"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-secondary">
+                                <asp:LinkButton ID="adminviewtravel" runat="server" OnClick="adminviewtravel_Click" CausesValidation="False">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <%--3/5--%>
+                                            <p class="text-secondary">View Travel</p>
+                                        </div>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-moonlit text-white ms-auto">
+                                            <i class='bx bx-detail'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-danger">
+                                <asp:LinkButton ID="adminmodifytravel" runat="server" OnClick="adminmodifytravel_Click" CausesValidation="False">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <%--3/6--%>
+                                            <p class="text-danger">Modfy Trvel</p>
+                                        </div>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-burning text-white ms-auto">
+                                            <i class='bx bx-edit'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end row-->
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-info">
+                                <asp:LinkButton ID="addtravelpayment" runat="server" OnClick="addtravelpayment_Click" CausesValidation="False">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <%--4/1--%>
+                                            <p class="text-info">Add Trv Pay</p>
+                                        </div>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto">
+                                            <i class='bx bx-rupee'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-warning">
+                                <asp:LinkButton ID="LinkButton2" runat="server" OnClick="empattendancereport_Click">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <%--4/2--%>
+                                            <p class="text-warning">Mdfy TrvPay</p>
+                                        </div>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-blooker text-white ms-auto">
+                                            <i class='bx bx-message-square-edit'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-success">
+                                <asp:LinkButton ID="adddealer" runat="server" OnClick="adddealer_Click" CausesValidation="False">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <%--4/3--%>
+                                            <p class="text-success">Add Dealer</p>
+                                        </div>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto">
+                                            <i class='bx bx-user-plus'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-secondary">
+                                <asp:LinkButton ID="modifydealer" runat="server" OnClick="modifydealer_Click" CausesValidation="False">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <%--4/4--%>
+                                            <p style="color: #8e2de2">Mdfy Dealer</p>
+                                        </div>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-cosmic text-white ms-auto">
+                                            <i class="bx bx-user-pin"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-pink">
+                                <asp:LinkButton ID="viewdealers" runat="server" OnClick="viewdealers_Click" CausesValidation="False">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <%--4/5--%>
+                                            <p class="text-pink">View Dealers</p>
+                                        </div>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-ibiza text-white ms-auto">
+                                            <i class='bx bx-user-circle'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-info">
+                                <asp:LinkButton ID="dthpacks" runat="server" OnClick="dthpacks_Click" CausesValidation="False">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <%--4/6--%>
+                                            <p class="text-info">DTH Packs</p>
+                                        </div>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto">
+                                            <i class='bx bx-building'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                </asp:LinkButton>
                             </div>
                         </div>
                     </div>

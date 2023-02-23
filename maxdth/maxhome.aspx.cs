@@ -99,5 +99,60 @@ namespace maxdth
         {
             Response.Redirect("duereportmodify.aspx");
         }
+
+        protected void connectionmonthlyreport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void overallgraph_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void adminempattendancereport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void adminmodifyattendance_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void adminviewtravel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void adminmodifytravel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void addtravelpayment_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void adddealer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void modifydealer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void viewdealers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void dthpacks_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

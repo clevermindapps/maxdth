@@ -109,7 +109,10 @@
     <Content Include="About.aspx" />
     <Content Include="addtask.aspx" />
     <Content Include="addtrip.aspx" />
+    <Content Include="adminempattendancemodify.aspx" />
+    <Content Include="adminempattendancereport.aspx" />
     <Content Include="changepassword.aspx" />
+    <Content Include="connectionmonthlyreport.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -950,6 +953,20 @@
     <Compile Include="addtrip.aspx.designer.cs">
       <DependentUpon>addtrip.aspx</DependentUpon>
     </Compile>
+    <Compile Include="adminempattendancemodify.aspx.cs">
+      <DependentUpon>adminempattendancemodify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminempattendancemodify.aspx.designer.cs">
+      <DependentUpon>adminempattendancemodify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminempattendancereport.aspx.cs">
+      <DependentUpon>adminempattendancereport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminempattendancereport.aspx.designer.cs">
+      <DependentUpon>adminempattendancereport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -965,6 +982,13 @@
     </Compile>
     <Compile Include="changepassword.aspx.designer.cs">
       <DependentUpon>changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="connectionmonthlyreport.aspx.cs">
+      <DependentUpon>connectionmonthlyreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="connectionmonthlyreport.aspx.designer.cs">
+      <DependentUpon>connectionmonthlyreport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
