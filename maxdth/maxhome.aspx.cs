@@ -18,7 +18,18 @@ namespace maxdth
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                Session["usertype"].Equals("employee");
+                adddealer.Visible = false;
+                modifydealer.Visible = false;
+                viewdealers.Visible = false;
 
+            }
+            catch(Exception ex)
+            {
+                Response.Write(ex.Message);
+            }
         }
 
         protected void addtask_Click(object sender, EventArgs e)
@@ -137,17 +148,17 @@ namespace maxdth
 
         protected void adddealer_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("dealeradd.aspx");
         }
 
         protected void modifydealer_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("dealermodify.aspx");
         }
 
         protected void viewdealers_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("dealerslist.aspx");
         }
 
         protected void dthpacks_Click(object sender, EventArgs e)
