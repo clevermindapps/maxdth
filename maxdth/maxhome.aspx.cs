@@ -20,11 +20,21 @@ namespace maxdth
         {
             try
             {
-                Session["usertype"].Equals("employee");
-                adddealer.Visible = false;
-                modifydealer.Visible = false;
-                viewdealers.Visible = false;
-
+                if (Session["usertype"].Equals("employee"))
+                {
+                    connectionmonthlyreport.Visible = false;
+                    overallgraph.Visible = false;
+                    adminempattendancereport.Visible = false;
+                    adminmodifyattendance.Visible = false;
+                    adminviewtravel.Visible = false;
+                    adminmodifytravel.Visible = false;
+                    addtravelpayment.Visible = false;
+                    modifytravelpayment.Visible=false;
+                    adddealer.Visible = false;
+                    modifydealer.Visible = false;
+                    viewdealers.Visible = false;
+                    dthpacks.Visible = false;
+                }
             }
             catch(Exception ex)
             {
@@ -162,6 +172,11 @@ namespace maxdth
         }
 
         protected void dthpacks_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void modifytravelpayment_Click(object sender, EventArgs e)
         {
 
         }

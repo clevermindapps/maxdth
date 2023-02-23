@@ -35,14 +35,14 @@ namespace maxdth
                 cmd.Parameters.AddWithValue("@dealerphone", dealerphone.Text.Trim());
                 cmd.Parameters.AddWithValue("@dealerarea", dealerarea.Text.Trim());
                 cmd.Parameters.AddWithValue("@remarks", remarks.Text.Trim());
-                //cmd.Parameters.AddWithValue("@addedby", Session["fullname"].ToString());
-                //cmd.Parameters.AddWithValue("@addeddatetime", addeddatetime.ToString());
-                //cmd.Parameters.AddWithValue("@modifiedby", Session["fullname"].ToString());
-                //cmd.Parameters.AddWithValue("@modifieddatetime", modifieddatetime.ToString());
+                cmd.Parameters.AddWithValue("@addedby", Session["fullname"].ToString());
+                cmd.Parameters.AddWithValue("@addeddatetime", addeddatetime.ToString());
+                cmd.Parameters.AddWithValue("@modifiedby", Session["fullname"].ToString());
+                cmd.Parameters.AddWithValue("@modifieddatetime", modifieddatetime.ToString());
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Write("<Script>alert('Dealer added Successfully')</script>");
+                Response.Write("<Script>alert('Dealer Added Successfully')</script>");
 
                 dealerid.Text = "";
                 dealername.Text = "";
@@ -50,9 +50,9 @@ namespace maxdth
                 dealerarea.Text = "";
                 remarks.Text = "";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Response.Write(ex.Message);
+                Response.Write("<Script>alert('Dealer Not Added')</script>");
             }
         }
     }
