@@ -29,11 +29,13 @@ namespace maxdth
                     adminviewtravel.Visible = false;
                     adminmodifytravel.Visible = false;
                     addtravelpayment.Visible = false;
-                    modifytravelpayment.Visible=false;
+                    modifyemptravelpayment.Visible = false;
                     adddealer.Visible = false;
                     modifydealer.Visible = false;
                     viewdealers.Visible = false;
                     dthpacks.Visible = false;
+                    
+
                 }
             }
             catch(Exception ex)
@@ -176,7 +178,7 @@ namespace maxdth
 
         }
 
-        protected void modifytravelpayment_Click(object sender, EventArgs e)
+        protected void modifyemptravelpayment_Click(object sender, EventArgs e)
         {
 
         }
