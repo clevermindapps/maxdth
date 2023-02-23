@@ -31,7 +31,7 @@
                         <SortedDescendingCellStyle BackColor="#E9EBEF" />
                         <SortedDescendingHeaderStyle BackColor="#4870BE" />
                         <Columns>
-                        <asp:CheckBoxField DataField="isactive"   SortExpression="isactive" HeaderText="Is Active" />
+                            <asp:CheckBoxField DataField="isactive" SortExpression="isactive" HeaderText="Is Active" />
                             <asp:BoundField DataField="subscriberid" ReadOnly="true" SortExpression="subscriberid" HeaderText="Subscriber ID" />
                             <asp:BoundField DataField="dthoperator" ReadOnly="true" SortExpression="dthoperator" HeaderText="DTH Operator" />
                             <asp:BoundField DataField="custname" ReadOnly="true" SortExpression="custname" HeaderText="Customer Name" />
@@ -44,7 +44,7 @@
                             <asp:BoundField DataField="addeddatetime" ReadOnly="true" SortExpression="addeddatetime" HeaderText="Added Date Time" />
                             <asp:BoundField DataField="modifiedby" ReadOnly="true" SortExpression="modifiedby" HeaderText="Modified By" />
                             <asp:BoundField DataField="modifieddatetime" ReadOnly="true" SortExpression="modifieddatetime" HeaderText="Modified Date Time" />
-                            </Columns>
+                        </Columns>
                     </asp:GridView>
                 </div>
             </div>

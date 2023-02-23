@@ -26,7 +26,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Is Active</label>
-                            <asp:DropDownList ID="isactive" runat="server">
+                            <asp:DropDownList CssClass="form-control" ID="isactive" runat="server">
                                 <asp:ListItem Text="-- Select Status -->" Value="" />
                                 <asp:ListItem Text="True" Value="True" />
                                 <asp:ListItem Text="False" Value="True" />
@@ -65,10 +65,14 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="*Required Field" ControlToValidate="monthlyamount"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Due Date</label>
-                            <asp:TextBox CssClass="form-control" ID="duedate" runat="server" TextMode="Date"></asp:TextBox>
+                            <label class="form-label">Old Due Date</label>
+                            <asp:TextBox CssClass="form-control" ID="duedate" runat="server" TextMode="DateTime"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="*Required Field" ControlToValidate="duedate"></asp:RequiredFieldValidator>
                         </div>
+                        <%--<div class="mb-3">
+                            <label class="form-label">New Due Date</label>
+                            <asp:TextBox CssClass="form-control" ID="newduedate" runat="server" TextMode="Date"></asp:TextBox>
+                        </div>--%>
                         <div class="mb-3">
                             <label class="form-label">Remarks</label>
                             <asp:TextBox CssClass="form-control" ID="remarks" runat="server" TextMode="MultiLine"></asp:TextBox>
