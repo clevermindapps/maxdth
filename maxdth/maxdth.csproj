@@ -108,9 +108,13 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="addtask.aspx" />
+    <Content Include="addtravelpayment.aspx" />
     <Content Include="addtrip.aspx" />
     <Content Include="adminempattendancemodify.aspx" />
     <Content Include="adminempattendancereport.aspx" />
+    <Content Include="adminmodifyattendance.aspx" />
+    <Content Include="adminmodifytravel.aspx" />
+    <Content Include="adminviewtravel.aspx" />
     <Content Include="changepassword.aspx" />
     <Content Include="connectionmonthlyreport.aspx" />
     <Content Include="Contact.aspx" />
@@ -123,6 +127,7 @@
     <Content Include="dealermodify.aspx" />
     <Content Include="dealerslist.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="dthpacks.aspx" />
     <Content Include="duereportentry.aspx" />
     <Content Include="duereportmodify.aspx" />
     <Content Include="empattendancereport.aspx" />
@@ -141,8 +146,10 @@
     <None Include="Properties\PublishProfiles\maxdth.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="maxhome.aspx" />
+    <Content Include="modifyemptravelpayment.aspx" />
     <Content Include="modifytask.aspx" />
     <Content Include="newconnectionentry.aspx" />
+    <Content Include="overallgraph.aspx" />
     <Content Include="pendingtasks.aspx" />
     <Content Include="rechargeduereport.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -946,6 +953,13 @@
     <Compile Include="addtask.aspx.designer.cs">
       <DependentUpon>addtask.aspx</DependentUpon>
     </Compile>
+    <Compile Include="addtravelpayment.aspx.cs">
+      <DependentUpon>addtravelpayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addtravelpayment.aspx.designer.cs">
+      <DependentUpon>addtravelpayment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="addtrip.aspx.cs">
       <DependentUpon>addtrip.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -966,6 +980,27 @@
     </Compile>
     <Compile Include="adminempattendancereport.aspx.designer.cs">
       <DependentUpon>adminempattendancereport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminmodifyattendance.aspx.cs">
+      <DependentUpon>adminmodifyattendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminmodifyattendance.aspx.designer.cs">
+      <DependentUpon>adminmodifyattendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminmodifytravel.aspx.cs">
+      <DependentUpon>adminmodifytravel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminmodifytravel.aspx.designer.cs">
+      <DependentUpon>adminmodifytravel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminviewtravel.aspx.cs">
+      <DependentUpon>adminviewtravel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminviewtravel.aspx.designer.cs">
+      <DependentUpon>adminviewtravel.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -1025,6 +1060,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dthpacks.aspx.cs">
+      <DependentUpon>dthpacks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dthpacks.aspx.designer.cs">
+      <DependentUpon>dthpacks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="duereportentry.aspx.cs">
       <DependentUpon>duereportentry.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1070,6 +1112,13 @@
     <Compile Include="maxhome.aspx.designer.cs">
       <DependentUpon>maxhome.aspx</DependentUpon>
     </Compile>
+    <Compile Include="modifyemptravelpayment.aspx.cs">
+      <DependentUpon>modifyemptravelpayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modifyemptravelpayment.aspx.designer.cs">
+      <DependentUpon>modifyemptravelpayment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="modifytask.aspx.cs">
       <DependentUpon>modifytask.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1083,6 +1132,13 @@
     </Compile>
     <Compile Include="newconnectionentry.aspx.designer.cs">
       <DependentUpon>newconnectionentry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="overallgraph.aspx.cs">
+      <DependentUpon>overallgraph.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="overallgraph.aspx.designer.cs">
+      <DependentUpon>overallgraph.aspx</DependentUpon>
     </Compile>
     <Compile Include="pendingtasks.aspx.cs">
       <DependentUpon>pendingtasks.aspx</DependentUpon>

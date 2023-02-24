@@ -177,13 +177,13 @@ namespace maxdth
         protected global::System.Web.UI.WebControls.LinkButton addtravelpayment;
 
         /// <summary>
-        /// modifyemptravelpayment control.
+        /// modifyemptravelpaymentid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton modifyemptravelpayment;
+        protected global::System.Web.UI.WebControls.LinkButton modifyemptravelpaymentid;
 
         /// <summary>
         /// adddealer control.

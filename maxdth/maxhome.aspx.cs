@@ -29,13 +29,11 @@ namespace maxdth
                     adminviewtravel.Visible = false;
                     adminmodifytravel.Visible = false;
                     addtravelpayment.Visible = false;
-                    modifyemptravelpayment.Visible = false;
+                    modifyemptravelpaymentid.Visible = false;
                     adddealer.Visible = false;
                     modifydealer.Visible = false;
                     viewdealers.Visible = false;
                     dthpacks.Visible = false;
-                    
-
                 }
             }
             catch(Exception ex)
@@ -125,37 +123,37 @@ namespace maxdth
 
         protected void connectionmonthlyreport_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("connectionmonthlyreport.aspx");
         }
 
         protected void overallgraph_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("overallgraph.aspx");
         }
 
         protected void adminempattendancereport_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("adminempattendancereport.aspx");
         }
 
         protected void adminmodifyattendance_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("adminmodifyattendance.aspx");
         }
 
         protected void adminviewtravel_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("adminviewtravel.aspx");
         }
 
         protected void adminmodifytravel_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("adminmodifytravel.aspx");
         }
 
         protected void addtravelpayment_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("addtravelpayment.aspx");
         }
 
         protected void adddealer_Click(object sender, EventArgs e)
@@ -175,12 +173,12 @@ namespace maxdth
 
         protected void dthpacks_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("dthpacks.aspx");
         }
 
         protected void modifyemptravelpayment_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("modifyemptravelpayment.aspx");
         }
     }
 }

@@ -378,7 +378,7 @@
                         </div>
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-warning">
-                                <asp:LinkButton ID="modifyemptravelpayment" runat="server" OnClick="modifyemptravelpayment_Click">
+                                <asp:LinkButton ID="modifyemptravelpaymentid" runat="server" OnClick="modifyemptravelpayment_Click">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>
