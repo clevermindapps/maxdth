@@ -138,7 +138,7 @@ namespace maxdth
 
         protected void adminmodifyattendance_Click(object sender, EventArgs e)
         {
-            Response.Redirect("adminmodifyattendance.aspx");
+            Response.Redirect("adminempattendancemodify.aspx");
         }
 
         protected void adminviewtravel_Click(object sender, EventArgs e)

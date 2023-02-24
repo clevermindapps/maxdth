@@ -112,7 +112,6 @@
     <Content Include="addtrip.aspx" />
     <Content Include="adminempattendancemodify.aspx" />
     <Content Include="adminempattendancereport.aspx" />
-    <Content Include="adminmodifyattendance.aspx" />
     <Content Include="adminmodifytravel.aspx" />
     <Content Include="adminviewtravel.aspx" />
     <Content Include="changepassword.aspx" />
@@ -980,13 +979,6 @@
     </Compile>
     <Compile Include="adminempattendancereport.aspx.designer.cs">
       <DependentUpon>adminempattendancereport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="adminmodifyattendance.aspx.cs">
-      <DependentUpon>adminmodifyattendance.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="adminmodifyattendance.aspx.designer.cs">
-      <DependentUpon>adminmodifyattendance.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminmodifytravel.aspx.cs">
       <DependentUpon>adminmodifytravel.aspx</DependentUpon>
