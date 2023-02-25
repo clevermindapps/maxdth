@@ -17,7 +17,7 @@
                             <label class="form-label">Travel Type</label>
                             <!--Drop Down-->
                             <asp:DropDownList CssClass="form-control" ID="traveltype" runat="server">
-                                <asp:ListItem Text="-- Select Task Name --" Value="" />
+                                <asp:ListItem Text="-- Select Travel Type --" Value="" />
                                 <asp:ListItem Text="Two Way" Value="Two Way" />
                                 <asp:ListItem Text="One Way" Value="One Way" />
                             </asp:DropDownList>

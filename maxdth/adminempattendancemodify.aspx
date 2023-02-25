@@ -23,7 +23,6 @@
                                 <div class="input-group">
                                     <asp:TextBox CssClass="form-control" ID="attendanceid" runat="server" placeholder="Attendance ID"></asp:TextBox>
                                     <asp:Button CssClass="btn btn-primary" ID="attendanceidbutton" runat="server" Text="Get Details" CausesValidation="False" OnClick="attendanceidbutton_Click" />
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Required Field" ControlToValidate="attendanceid"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                         </div>
