@@ -65,12 +65,12 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">No Of Kms</label>
-                            <asp:TextBox CssClass="form-control" ID="noofkms" runat="server" TextMode="Number" ReadOnly="true" OnLoad="noofkms_Load"></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="noofkms" runat="server" TextMode="Number" OnLoad="noofkms_Load"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*Required Field" ControlToValidate="noofkms"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Amount</label>
-                            <asp:TextBox CssClass="form-control" ID="amount" runat="server"></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="amount" runat="server" TextMode="Number"></asp:TextBox>
                         </div>
                         <div class="mb-3">
                              <label class="form-label">Remarks</label>
