@@ -43,14 +43,14 @@ namespace maxdth
                 }
                 else
                 {
-                    Response.Write("<Script>alert('Please Enter Travelid ID ')</script>");
+                    Response.Write("<Script>alert('Please Enter Correct Travel ID ')</script>");
 
                     travelid.Text = "";
                 }
             }
             catch (Exception)
             {
-                Response.Write("<Script>alert('Please Enter Correct Travelid ID ')</script>");
+                Response.Write("<Script>alert('Please Enter Correct Travel ID ')</script>");
 
                 travelid.Text = "";
             }

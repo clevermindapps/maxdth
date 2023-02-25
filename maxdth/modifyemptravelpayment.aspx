@@ -22,7 +22,7 @@
                             <div class="form-group">
                                 <div class="input-group">
                                     <asp:TextBox CssClass="form-control" ID="paymentid" runat="server" TextMode="Number"></asp:TextBox>
-                                    <asp:Button CssClass="btn btn-primary" ID="paymentidbutton" runat="server" Text="Get Payment Details" CausesValidation="False" />
+                                    <asp:Button CssClass="btn btn-primary" ID="paymentidbutton" runat="server" Text="Get Payment Details" CausesValidation="False" OnClick="paymentidbutton_Click" />
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                             <asp:TextBox CssClass="form-control" ID="remarks" runat="server" ReadOnly="false" TextMode="MultiLine"></asp:TextBox>
                         </div>
                         <div>
-                            <asp:Button CssClass="form-control btn btn-primary" ID="travelpayment" runat="server" Text="Modify Travel Payment" />
+                            <asp:Button CssClass="form-control btn btn-primary" ID="travelpayment" runat="server" Text="Modify Travel Payment" OnClick="travelpayment_Click" />
                         </div>
                     </div>
                 </div>
