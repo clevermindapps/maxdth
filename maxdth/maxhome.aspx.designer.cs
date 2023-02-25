@@ -177,6 +177,15 @@ namespace maxdth
         protected global::System.Web.UI.WebControls.LinkButton addtravelpayment;
 
         /// <summary>
+        /// viewtravelpayment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton viewtravelpayment;
+
+        /// <summary>
         /// modifyemptravelpaymentid control.
         /// </summary>
         /// <remarks>
@@ -211,14 +220,5 @@ namespace maxdth
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton viewdealers;
-
-        /// <summary>
-        /// dthpacks control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton dthpacks;
     }
 }

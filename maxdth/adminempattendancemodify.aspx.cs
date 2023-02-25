@@ -13,5 +13,15 @@ namespace maxdth
         {
 
         }
+
+        protected void attendanceidbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void modifyattendancebutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

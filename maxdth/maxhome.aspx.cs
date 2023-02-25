@@ -29,11 +29,11 @@ namespace maxdth
                     adminviewtravel.Visible = false;
                     adminmodifytravel.Visible = false;
                     addtravelpayment.Visible = false;
+                    viewtravelpayment.Visible = false;
                     modifyemptravelpaymentid.Visible = false;
                     adddealer.Visible = false;
                     modifydealer.Visible = false;
                     viewdealers.Visible = false;
-                    dthpacks.Visible = false;
                 }
             }
             catch(Exception ex)
@@ -171,14 +171,14 @@ namespace maxdth
             Response.Redirect("dealerslist.aspx");
         }
 
-        protected void dthpacks_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("dthpacks.aspx");
-        }
-
         protected void modifyemptravelpayment_Click(object sender, EventArgs e)
         {
             Response.Redirect("modifyemptravelpayment.aspx");
+        }
+
+        protected void viewtravelpayment_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("adminviewtravelpayment.aspx");
         }
     }
 }

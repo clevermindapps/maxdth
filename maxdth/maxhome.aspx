@@ -377,12 +377,33 @@
                             </div>
                         </div>
                         <div class="col-6">
+                            <div class="card radius-10 border-start border-0 border-3 border-secondary">
+                                <asp:LinkButton ID="viewtravelpayment" runat="server" OnClick="viewtravelpayment_Click" CausesValidation="False">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <%--4/2--%>
+                                            <p style="color: #8e2de2">View TrvPay</p>
+                                        </div>
+                                        <div class="widgets-icons-2 rounded-circle bg-gradient-cosmic text-white ms-auto">
+                                            <i class='bx bx-columns'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-warning">
                                 <asp:LinkButton ID="modifyemptravelpaymentid" runat="server" OnClick="modifyemptravelpayment_Click">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>
-                                            <%--4/2--%>
+                                            <%--4/3--%>
                                             <p class="text-warning">Mdfy TrvPay</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-blooker text-white ms-auto">
@@ -393,17 +414,13 @@
                                 </asp:LinkButton>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row">
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-success">
                                 <asp:LinkButton ID="adddealer" runat="server" OnClick="adddealer_Click" CausesValidation="False">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>
-                                            <%--4/3--%>
+                                            <%--4/4--%>
                                             <p class="text-success">Add Dealer</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto">
@@ -414,13 +431,17 @@
                                 </asp:LinkButton>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-secondary">
                                 <asp:LinkButton ID="modifydealer" runat="server" OnClick="modifydealer_Click" CausesValidation="False">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>
-                                            <%--4/4--%>
+                                            <%--4/5--%>
                                             <p style="color: #8e2de2">Mdfy Dealer</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-cosmic text-white ms-auto">
@@ -431,38 +452,17 @@
                                 </asp:LinkButton>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row">
                         <div class="col-6">
                             <div class="card radius-10 border-start border-0 border-3 border-pink">
                                 <asp:LinkButton ID="viewdealers" runat="server" OnClick="viewdealers_Click" CausesValidation="False">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div>
-                                            <%--4/5--%>
+                                            <%--4/6--%>
                                             <p class="text-pink">View Dealers</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-ibiza text-white ms-auto">
                                             <i class='bx bx-user-circle'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                </asp:LinkButton>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card radius-10 border-start border-0 border-3 border-info">
-                                <asp:LinkButton ID="dthpacks" runat="server" OnClick="dthpacks_Click" CausesValidation="False">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div>
-                                            <%--4/6--%>
-                                            <p class="text-info">DTH Packs</p>
-                                        </div>
-                                        <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto">
-                                            <i class='bx bx-building'></i>
                                         </div>
                                     </div>
                                 </div>

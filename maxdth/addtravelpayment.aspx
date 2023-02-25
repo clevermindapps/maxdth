@@ -1,37 +1,54 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="addtravelpayment.aspx.cs" Inherits="maxdth.addtravelpayment" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <!--start page wrapper -->
-    <div class="page-wrapper">
-        <div class="page-content">
-            <div>
-                <br />
-                <h5 style="color:red">Travel Payment List</h5>
-                <hr />
-                <div>
-                    <asp:GridView CssClass="table-responsive table-bordered" ID="travelpayment" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BorderStyle="Solid" CellPadding="4" DataKeyNames="paymentid" DataSourceID="travelpaymentlistDS" ForeColor="#333333" GridLines="Both" BorderWidth="2" HorizontalAlign="NotSet" HeaderStyle-HorizontalAlign="Center">
-                        <AlternatingRowStyle BackColor="White" />
-                        <Columns>
-                            <asp:CheckBoxField DataField="isactive" HeaderText="Is Active" SortExpression="isactive" />
-                            <asp:BoundField DataField="paymentid" HeaderText="Payment ID" InsertVisible="False" ReadOnly="True" SortExpression="paymentid" />
-                            <asp:BoundField DataField="empname" HeaderText="Emp Name" SortExpression="empname" />
-                            <asp:BoundField DataField="amount" HeaderText="Amount" SortExpression="amount" />
-                            <asp:BoundField DataField="paiddate" HeaderText="Paid Date" SortExpression="paiddate" />
-                            <asp:BoundField DataField="remarks" HeaderText="Remarks" SortExpression="remarks" />
-                            <asp:BoundField DataField="addedby" HeaderText="Added By" SortExpression="addedby" />
-                            <asp:BoundField DataField="modifiedby" HeaderText="Modified By" SortExpression="modifiedby" />
-                        </Columns>
-                        <EditRowStyle BackColor="#2461BF" />
-                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#EFF3FB" />
-                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
-                    </asp:GridView>
-                    <asp:SqlDataSource ID="travelpaymentlistDS" runat="server" ConnectionString="<%$ ConnectionStrings:maxdbConnectionString %>" SelectCommand="SELECT * FROM [travelpayment_tbl]"></asp:SqlDataSource>
+    <!-- wrapper -->
+    <div class="wrapper">
+        <br />
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-11 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-start">
+                            <center>
+                            </center>
+                        </div>
+                        <center>
+                            <h4 class="mt-3 font-weight-bold">Add Travel Payment</h4>
+                        </center>
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Employee Name</label>
+                            <!--Drop Down-->
+                            <asp:DropDownList CssClass="form-control" ID="employeename" runat="server">
+                                <asp:ListItem Text="-- Select Value --" Value="" />
+                                <asp:ListItem Text="Abdul Pahim Basha Shaik" Value="Abdul Pahim Basha Shaik" />
+                                <asp:ListItem Text="Basheer Ahmad Shaik" Value="Basheer Ahmad Shaik" />
+                                <asp:ListItem Text="Jaheem Basha Shaik" Value="Jaheem Basha Shaik" />
+                                <asp:ListItem Text="Suman Samanthula" Value="Suman Samanthula" />
+                                <asp:ListItem Text="CleverMind" Value="CleverMind" />
+                            </asp:DropDownList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Required Field" ControlToValidate="employeename"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Amount</label>
+                            <asp:TextBox CssClass="form-control" ID="travelamount" runat="server" placeholder="500" TextMode="Number"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*Required Field" ControlToValidate="travelamount"></asp:RequiredFieldValidator><br />
+                            <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="*Please enter amount from 0 to 10000 only" ControlToValidate="travelamount" MinimumValue="0" MaximumValue="10000" Display="Static" Type="Integer"></asp:RangeValidator>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Payment Date</label>
+                            <asp:TextBox CssClass="form-control" ID="paymentdate" runat="server" TextMode="Date"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*Required Field" ControlToValidate="paymentdate"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Remarks</label>
+                            <asp:TextBox CssClass="form-control" ID="remarks" runat="server" TextMode="MultiLine"></asp:TextBox>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <asp:Button CssClass="form-control btn btn-primary" ID="addtravelpaymentbutton" runat="server" Text="Add Travel Payment" OnClick="addtravelpaymentbutton_Click" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

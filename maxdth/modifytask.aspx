@@ -31,6 +31,7 @@
                         <div class="mb-3">
                              <label class="form-label">Is Active</label>
                             <asp:DropDownList CssClass="form-control" ID="isactive" runat="server">
+                                <asp:ListItem Text="-- Select Value --" Value=""></asp:ListItem>
                                 <asp:ListItem Text="True" Value="True"></asp:ListItem>
                                 <asp:ListItem Text="False" Value="False"></asp:ListItem>
                             </asp:DropDownList>
@@ -39,6 +40,7 @@
                         <div class="mb-3">
                             <label class="form-label">Task Status</label>
                             <asp:DropDownList CssClass="form-control" ID="taskstatus" runat="server">
+                                <asp:ListItem Text="-- Select Value --" Value="" />
                                 <asp:ListItem Text="Pending" Value="Pending" />
                                 <asp:ListItem Text="In Progress" Value="In Progress" />
                                 <asp:ListItem Text="Completed" Value="Completed" />

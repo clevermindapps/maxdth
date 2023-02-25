@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace maxdth
 {
-    public partial class addtravelpayment : System.Web.UI.Page
+    public partial class adminviewtravelpayment : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void addtravelpaymentbutton_Click(object sender, EventArgs e)
         {
 
         }

@@ -114,6 +114,7 @@
     <Content Include="adminempattendancereport.aspx" />
     <Content Include="adminmodifytravel.aspx" />
     <Content Include="adminviewtravel.aspx" />
+    <Content Include="adminviewtravelpayment.aspx" />
     <Content Include="changepassword.aspx" />
     <Content Include="connectionmonthlyreport.aspx" />
     <Content Include="Contact.aspx" />
@@ -993,6 +994,13 @@
     </Compile>
     <Compile Include="adminviewtravel.aspx.designer.cs">
       <DependentUpon>adminviewtravel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminviewtravelpayment.aspx.cs">
+      <DependentUpon>adminviewtravelpayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminviewtravelpayment.aspx.designer.cs">
+      <DependentUpon>adminviewtravelpayment.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
