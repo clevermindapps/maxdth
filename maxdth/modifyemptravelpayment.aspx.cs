@@ -72,7 +72,7 @@ namespace maxdth
                 con.Close();
                 Response.Write("<Script>alert('Travel Payment Modified Successfully')</script>");
 
-
+                paymentid.Text = "";
                 empname.Text = "";
                 amount.Text = "";
                 paiddate.Text = "";
