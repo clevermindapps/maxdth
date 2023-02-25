@@ -36,6 +36,11 @@
                     <SortedDescendingCellStyle BackColor="#E9EBEF" />
                     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
+                <hr />
+                <h5>
+                    Number of working Days in this Month:<asp:Label ID="workingdays" runat="server" Text="Label"></asp:Label>
+                </h5>
+                
             </div>
             <div>
                 <br />

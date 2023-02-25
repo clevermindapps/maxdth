@@ -31,7 +31,17 @@ namespace maxdth
             sd.Fill(dt);
             empmonthlyattendance.DataSource = dt;
             empmonthlyattendance.DataBind();
+            SqlCommand cmd = new SqlCommand("select sum(fulldayorhalfday) from attendance_tbl where isactive=@isactive and userfullname=@userfullname and monthcode=@monthcode", conn);
+            cmd.Parameters.AddWithValue("@isactive", "1");
+            cmd.Parameters.AddWithValue("@userfullname", Session["fullname"].ToString());
+            cmd.Parameters.AddWithValue("@monthcode", empmonthcode.SelectedItem.Value);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if(dr.Read())
+            {
+                workingdays.Text = dr[0].ToString();
+            }
             conn.Close();
+
         }
     }
 }

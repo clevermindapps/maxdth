@@ -42,6 +42,15 @@ namespace maxdth
         protected global::System.Web.UI.WebControls.GridView empmonthlyattendance;
 
         /// <summary>
+        /// workingdays control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label workingdays;
+
+        /// <summary>
         /// empattendance control.
         /// </summary>
         /// <remarks>
