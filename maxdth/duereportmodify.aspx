@@ -69,10 +69,11 @@
                             <asp:TextBox CssClass="form-control" ID="duedate" runat="server" TextMode="DateTime"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="*Required Field" ControlToValidate="duedate"></asp:RequiredFieldValidator>
                         </div>
-                        <%--<div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">New Due Date</label>
                             <asp:TextBox CssClass="form-control" ID="newduedate" runat="server" TextMode="Date"></asp:TextBox>
-                        </div>--%>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="*Required Field" ControlToValidate="newduedate"></asp:RequiredFieldValidator>
+                        </div>
                         <div class="mb-3">
                             <label class="form-label">Remarks</label>
                             <asp:TextBox CssClass="form-control" ID="remarks" runat="server" TextMode="MultiLine"></asp:TextBox>

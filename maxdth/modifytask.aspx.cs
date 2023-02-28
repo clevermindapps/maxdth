@@ -66,37 +66,142 @@ namespace maxdth
         {
             try
             {
-                SqlConnection con = new SqlConnection(strconn);
-                con.Open();
-                SqlCommand com = new SqlCommand("UPDATE task_tbl SET isactive=@isactive,taskstatus=@taskstatus,taskname=@taskname,custname=@custname,amount=@amount,custphone=@custphone,custarea=@custarea,remarks=@remarks,modifiedby=@modifiedby,modifieddatetime=@modifieddatetime WHERE taskid=" + Convert.ToInt32(taskid.Text.Trim()), con);
+                if(taskname.SelectedItem.Value == "Recharge")
+                {
+                    if(taskstatus.SelectedItem.Value == "Completed")
+                    {
+                        SqlConnection conn = new SqlConnection(strconn);
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand("select * from duereport_tbl where subscriberid=" + Convert.ToInt64(customerphone.Text), conn);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        if (dr.HasRows)
+                        {
+                            conn.Close();
+                            SqlConnection con = new SqlConnection(strconn);
+                            con.Open();
+                            SqlCommand com = new SqlCommand("UPDATE task_tbl SET isactive=@isactive,taskstatus=@taskstatus,taskname=@taskname,custname=@custname,amount=@amount,custphone=@custphone,custarea=@custarea,remarks=@remarks,modifiedby=@modifiedby,modifieddatetime=@modifieddatetime WHERE taskid=" + Convert.ToInt32(taskid.Text.Trim()), con);
+
+                            com.Parameters.AddWithValue("@isactive", isactive.SelectedItem.Value);
+                            com.Parameters.AddWithValue("@taskstatus", taskstatus.SelectedItem.Value);
+                            com.Parameters.AddWithValue("@taskname", taskname.SelectedItem.Value);
+                            com.Parameters.AddWithValue("@custname", customername.Text.Trim());
+                            com.Parameters.AddWithValue("@custphone", customerphone.Text.Trim());
+                            com.Parameters.AddWithValue("@custarea", customerarea.Text.Trim());
+                            com.Parameters.AddWithValue("@amount", Convert.ToInt32(amount.Text.Trim()));
+                            com.Parameters.AddWithValue("@remarks", remarks.Text.Trim());
+                            com.Parameters.AddWithValue("@modifiedby", Session["fullname"].ToString());
+                            com.Parameters.AddWithValue("@modifieddatetime", modifieddatetime.ToString());
+                            com.ExecuteNonQuery();
+                            con.Close();
+
+                            taskid.Text = "";
+                            isactive.ClearSelection();
+                            taskstatus.ClearSelection();
+                            taskname.ClearSelection();
+                            customername.Text = "";
+                            customerphone.Text = "";
+                            customerarea.Text = "";
+                            amount.Text = "";
+                            remarks.Text = "";
+
+                            Response.Redirect("duereportmodify.aspx");
+
+                        }
+                        else
+                        {
+                            conn.Close();
+                            SqlConnection con = new SqlConnection(strconn);
+                            con.Open();
+                            SqlCommand com = new SqlCommand("UPDATE task_tbl SET isactive=@isactive,taskstatus=@taskstatus,taskname=@taskname,custname=@custname,amount=@amount,custphone=@custphone,custarea=@custarea,remarks=@remarks,modifiedby=@modifiedby,modifieddatetime=@modifieddatetime WHERE taskid=" + Convert.ToInt32(taskid.Text.Trim()), con);
+
+                            com.Parameters.AddWithValue("@isactive", isactive.SelectedItem.Value);
+                            com.Parameters.AddWithValue("@taskstatus", taskstatus.SelectedItem.Value);
+                            com.Parameters.AddWithValue("@taskname", taskname.SelectedItem.Value);
+                            com.Parameters.AddWithValue("@custname", customername.Text.Trim());
+                            com.Parameters.AddWithValue("@custphone", customerphone.Text.Trim());
+                            com.Parameters.AddWithValue("@custarea", customerarea.Text.Trim());
+                            com.Parameters.AddWithValue("@amount", Convert.ToInt32(amount.Text.Trim()));
+                            com.Parameters.AddWithValue("@remarks", remarks.Text.Trim());
+                            com.Parameters.AddWithValue("@modifiedby", Session["fullname"].ToString());
+                            com.Parameters.AddWithValue("@modifieddatetime", modifieddatetime.ToString());
+                            com.ExecuteNonQuery();
+                            con.Close();
+
+                            taskid.Text = "";
+                            isactive.ClearSelection();
+                            taskstatus.ClearSelection();
+                            taskname.ClearSelection();
+                            customername.Text = "";
+                            customerphone.Text = "";
+                            customerarea.Text = "";
+                            amount.Text = "";
+                            remarks.Text = "";
+                            Response.Redirect("duereportentry.aspx");
+                        }
+                    }
+                    else
+                    {
+                        SqlConnection con = new SqlConnection(strconn);
+                        con.Open();
+                        SqlCommand com = new SqlCommand("UPDATE task_tbl SET isactive=@isactive,taskstatus=@taskstatus,taskname=@taskname,custname=@custname,amount=@amount,custphone=@custphone,custarea=@custarea,remarks=@remarks,modifiedby=@modifiedby,modifieddatetime=@modifieddatetime WHERE taskid=" + Convert.ToInt32(taskid.Text.Trim()), con);
 
 
-                com.Parameters.AddWithValue("@isactive", isactive.SelectedItem.Value);
-                com.Parameters.AddWithValue("@taskstatus", taskstatus.SelectedItem.Value);
-                com.Parameters.AddWithValue("@taskname", taskname.SelectedItem.Value);
-                com.Parameters.AddWithValue("@custname", customername.Text.Trim());
-                com.Parameters.AddWithValue("@custphone", customerphone.Text.Trim());
-                com.Parameters.AddWithValue("@custarea", customerarea.Text.Trim());
-                com.Parameters.AddWithValue("@amount", Convert.ToInt32(amount.Text.Trim()));
-                com.Parameters.AddWithValue("@remarks", remarks.Text.Trim());
-                com.Parameters.AddWithValue("@modifiedby", Session["fullname"].ToString());
-                com.Parameters.AddWithValue("@modifieddatetime", modifieddatetime.ToString());
+                        com.Parameters.AddWithValue("@isactive", isactive.SelectedItem.Value);
+                        com.Parameters.AddWithValue("@taskstatus", taskstatus.SelectedItem.Value);
+                        com.Parameters.AddWithValue("@taskname", taskname.SelectedItem.Value);
+                        com.Parameters.AddWithValue("@custname", customername.Text.Trim());
+                        com.Parameters.AddWithValue("@custphone", customerphone.Text.Trim());
+                        com.Parameters.AddWithValue("@custarea", customerarea.Text.Trim());
+                        com.Parameters.AddWithValue("@amount", Convert.ToInt32(amount.Text.Trim()));
+                        com.Parameters.AddWithValue("@remarks", remarks.Text.Trim());
+                        com.Parameters.AddWithValue("@modifiedby", Session["fullname"].ToString());
+                        com.Parameters.AddWithValue("@modifieddatetime", modifieddatetime.ToString());
+                        com.ExecuteNonQuery();
+                        con.Close();
+                        Response.Write("<Script>alert('Task Modified Successfully')</script>");
+
+                        taskid.Text = "";
+                        isactive.ClearSelection();
+                        taskstatus.ClearSelection();
+                        taskname.ClearSelection();
+                        customername.Text = "";
+                        customerphone.Text = "";
+                        customerarea.Text = "";
+                        amount.Text = "";
+                        remarks.Text = "";
+                    }
+                }
+                else
+                {
+                    SqlConnection con = new SqlConnection(strconn);
+                    con.Open();
+                    SqlCommand com = new SqlCommand("UPDATE task_tbl SET isactive=@isactive,taskstatus=@taskstatus,taskname=@taskname,custname=@custname,amount=@amount,custphone=@custphone,custarea=@custarea,remarks=@remarks,modifiedby=@modifiedby,modifieddatetime=@modifieddatetime WHERE taskid=" + Convert.ToInt32(taskid.Text.Trim()), con);
 
 
-                com.ExecuteNonQuery();
-                con.Close();
-                Response.Write("<Script>alert('Task Modified Successfully')</script>");
+                    com.Parameters.AddWithValue("@isactive", isactive.SelectedItem.Value);
+                    com.Parameters.AddWithValue("@taskstatus", taskstatus.SelectedItem.Value);
+                    com.Parameters.AddWithValue("@taskname", taskname.SelectedItem.Value);
+                    com.Parameters.AddWithValue("@custname", customername.Text.Trim());
+                    com.Parameters.AddWithValue("@custphone", customerphone.Text.Trim());
+                    com.Parameters.AddWithValue("@custarea", customerarea.Text.Trim());
+                    com.Parameters.AddWithValue("@amount", Convert.ToInt32(amount.Text.Trim()));
+                    com.Parameters.AddWithValue("@remarks", remarks.Text.Trim());
+                    com.Parameters.AddWithValue("@modifiedby", Session["fullname"].ToString());
+                    com.Parameters.AddWithValue("@modifieddatetime", modifieddatetime.ToString());
+                    com.ExecuteNonQuery();
+                    con.Close();
+                    Response.Write("<Script>alert('Task Modified Successfully')</script>");
 
-                taskid.Text = "";
-                isactive.ClearSelection();
-                taskstatus.ClearSelection();
-                taskname.ClearSelection();
-                customername.Text = "";
-                customerphone.Text = "";
-                customerarea.Text = "";
-                amount.Text = "";
-                remarks.Text = "";
-
+                    taskid.Text = "";
+                    isactive.ClearSelection();
+                    taskstatus.ClearSelection();
+                    taskname.ClearSelection();
+                    customername.Text = "";
+                    customerphone.Text = "";
+                    customerarea.Text = "";
+                    amount.Text = "";
+                    remarks.Text = "";
+                }
             }
             catch (Exception)
             {

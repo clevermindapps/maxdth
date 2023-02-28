@@ -36,7 +36,7 @@ namespace maxdth
                 com.Parameters.AddWithValue("@custphone", customerphone.Text.Trim());
                 com.Parameters.AddWithValue("@custarea", customerarea.Text.Trim());
                 com.Parameters.AddWithValue("@monthlyamount", Convert.ToInt32(monthlyamount.Text.Trim()));
-                com.Parameters.AddWithValue("@duedate", duedate.Text);
+                com.Parameters.AddWithValue("@duedate", newduedate.Text);
                 com.Parameters.AddWithValue("@remarks", remarks.Text.Trim());
                 com.Parameters.AddWithValue("@modifiedby", Session["fullname"].ToString());
                 com.Parameters.AddWithValue("@modifieddatetime", modifieddatetime.ToString());
@@ -44,6 +44,7 @@ namespace maxdth
                 con.Close();
                 Response.Write("<Script>alert('Details Modified Successfully')</script>");
 
+                subscriberid.Text = "";
                 isactive.ClearSelection();
                 dthoperator.ClearSelection();
                 customername.Text = "";
@@ -51,6 +52,7 @@ namespace maxdth
                 customerarea.Text = "";
                 monthlyamount.Text = "";
                 duedate.Text = "";
+                newduedate.Text = "";
                 remarks.Text = "";
             }
             catch (Exception)
@@ -86,7 +88,7 @@ namespace maxdth
                     }
                     else
                     {
-                        Response.Write("<Script>alert('Please Enter Correct Subscriber ID ')</script>");
+                        Response.Write("<Script>alert('Details are not available for this Subscriber ID ')</script>");
                     }
 
                 }
