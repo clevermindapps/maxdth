@@ -30,7 +30,7 @@
             <hr />
             <asp:GridView CssClass="table-responsive table-bordered" ID="GridView2" runat="server"></asp:GridView>
             <hr />
-            <asp:Chart ID="Chart1" runat="server">
+            <asp:Chart ID="Chart1" runat="server" DataSourceID="testingchartds">
                 <Series>
                     <asp:Series Name="Series1"></asp:Series>
                 </Series>
@@ -38,6 +38,7 @@
                     <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
                 </ChartAreas>
             </asp:Chart>
+            <asp:SqlDataSource runat="server" ID="testingchartds" ConnectionString="<%$ ConnectionStrings:maxdbConnectionString %>" SelectCommand="SELECT * FROM [attendance_tbl]"></asp:SqlDataSource>
         </div>
 
 
