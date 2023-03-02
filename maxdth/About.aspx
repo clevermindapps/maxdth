@@ -30,15 +30,42 @@
             <hr />
             <asp:GridView CssClass="table-responsive table-bordered" ID="GridView2" runat="server"></asp:GridView>
             <hr />
-            <asp:Chart ID="Chart1" runat="server" DataSourceID="testingchartds">
+            <asp:Chart ID="Chart1" runat="server" DataSourceID="testingchartds" Width="1000px">
                 <Series>
-                    <asp:Series Name="Series1"></asp:Series>
+                    <asp:Series Name="Series1" XValueMember="userfullname" YValueMembers="Column1"></asp:Series>
                 </Series>
                 <ChartAreas>
                     <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
                 </ChartAreas>
             </asp:Chart>
-            <asp:SqlDataSource runat="server" ID="testingchartds" ConnectionString="<%$ ConnectionStrings:maxdbConnectionString %>" SelectCommand="SELECT * FROM [attendance_tbl]"></asp:SqlDataSource>
+            <asp:SqlDataSource runat="server" ID="testingchartds" ConnectionString="<%$ ConnectionStrings:maxdbConnectionString %>" SelectCommand="select COUNT(monthcode), userfullname from attendance_tbl group by userfullname"></asp:SqlDataSource>
+
+            <hr />
+            <br />
+            <br />
+            <h2>Bar Chart 2</h2>
+            <asp:Chart ID="barchart" runat="server" DataSourceID="empatnDS" OnLoad="barchart_Load">
+                <Series>
+                    <asp:Series Name="Series1" XValueMember="userfullname" YValueMembers="noofworkingdays"></asp:Series>
+                </Series>
+                <ChartAreas>
+                    <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                </ChartAreas>
+            </asp:Chart>
+            <asp:SqlDataSource runat="server" ID="empatnDS" ConnectionString="<%$ ConnectionStrings:maxdbConnectionString %>" SelectCommand="select userfullname, count(fulldayorhalfday) as noofworkingdays from attendance_tbl group by userfullname"></asp:SqlDataSource>
+
+            <br />
+            <br />
+            <hr />
+            <asp:GridView CssClass="table-responsive table-bordered" ID="GridView3" runat="server" DataSourceID="empatnDS" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" OnSelectedIn="" PageSize="20" BorderStyle="Solid" BorderWidth="2px" ShowFooter="True">
+                <Columns>
+                    <asp:BoundField DataField="userfullname" HeaderText="Employee Name" SortExpression="userfullname"></asp:BoundField>
+                    <asp:BoundField DataField="noofworkingdays" HeaderText="No of Working Days" ReadOnly="True" SortExpression="noofworkingdays"></asp:BoundField>
+                </Columns>
+            </asp:GridView>
+            <br />
+            <br />
+            <br />
         </div>
 
 

@@ -34,7 +34,8 @@
                                             <p class="text-danger">Pending Tasks</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-bloody text-white ms-auto">
-                                            <i class='bx bx-error'></i>
+                                            <%--<i class='bx bx-error'></i>--%>
+                                            <p class="mt-3"><asp:Label ID="noofpendingtasks" runat="server" Text="1"></asp:Label></p>
                                         </div>
                                     </div>
                                 </div>

@@ -68,5 +68,15 @@ namespace maxdth
             GridView2.DataBind();
             conn.Close();
         }
+
+        protected void barchart_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void GridView3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

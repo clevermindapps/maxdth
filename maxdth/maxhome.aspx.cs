@@ -15,6 +15,7 @@ namespace maxdth
         string strconn = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         string yyyymmdd = DateTime.Now.Year.ToString() + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd");
         string monthcode = DateTime.Now.Year.ToString() + DateTime.Now.ToString("MM");
+        string totalpendingtasks = "SELECT count(taskname) FROM task_tbl WHERE taskstatus!='Completed' AND isactive='1'";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -40,6 +41,17 @@ namespace maxdth
             {
                 Response.Write(ex.Message);
             }
+
+            // Number of Pending Tasks
+            SqlConnection connc = new SqlConnection(strconn);
+            connc.Open();
+            SqlCommand cmdnc = new SqlCommand(totalpendingtasks, connc);
+            SqlDataReader drpt = cmdnc.ExecuteReader();
+            if (drpt.Read())
+            {
+                noofpendingtasks.Text = drpt[0].ToString();
+            }
+            connc.Close();
         }
 
         protected void addtask_Click(object sender, EventArgs e)
