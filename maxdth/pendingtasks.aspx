@@ -117,7 +117,7 @@
             <div>
                 <br />
                 <h5 style="color:red">List of Pending Tasks</h5>
-                <br />
+                <hr />
                 <asp:GridView CssClass="table-responsive table-bordered" ID="tasks" runat="server" OnSelectedIndexChanged="tasks_SelectedIndexChanged" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="taskid" DataSourceID="SqlDatapendingtasks" ForeColor="#333333" GridLines="Both" PagerStyle-BorderStyle="Solid" PagerStyle-BorderColor="#FF6600" AllowCustomPaging="True" PageSize="20" BorderStyle="Solid" BorderWidth="2">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
@@ -147,6 +147,44 @@
                     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDatapendingtasks" runat="server" ConnectionString="<%$ ConnectionStrings:maxdbConnectionString %>" SelectCommand="SELECT * FROM [task_tbl] WHERE [isactive] = 1 AND [taskstatus] != 'Completed'"></asp:SqlDataSource>
+            </div>
+            <div>
+                <br />
+                <h5 style="color:red">List of Completed Tasks</h5>
+                <hr />
+                <asp:GridView CssClass="table-respnsive table-bordered" ID="completedtasksgridview" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BorderStyle="Solid" CellPadding="4" DataKeyNames="taskid" DataSourceID="completedtasksDS" ForeColor="#333333" GridLines="Both" BorderWidth="2" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" PageSize="30">
+                    <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:CheckBoxField DataField="isactive" HeaderText="Is Active" SortExpression="isactive" />
+                        <asp:BoundField DataField="taskid" HeaderText="Task ID" InsertVisible="False" ReadOnly="True" SortExpression="taskid" />
+                        <asp:BoundField DataField="taskstatus" HeaderText="Task Status" SortExpression="taskstatus" />
+                        <asp:BoundField DataField="taskname" HeaderText="Task Name" SortExpression="taskname" />
+                        <asp:BoundField DataField="custname" HeaderText="Cust Name" SortExpression="custname" />
+                        <asp:BoundField DataField="custphone" HeaderText="Cust Phone" SortExpression="custphone" />
+                        <asp:BoundField DataField="custarea" HeaderText="Cust Area" SortExpression="custarea" />
+                        <asp:BoundField DataField="amount" HeaderText="Amount" SortExpression="amount" />
+                        <asp:BoundField DataField="remarks" HeaderText="Remarks" SortExpression="remarks" />
+                        <asp:BoundField DataField="addedby" HeaderText="Added By" SortExpression="addedby" />
+                        <asp:BoundField DataField="addeddatetime" HeaderText="Added Date Time" SortExpression="addeddatetime" />
+                        <asp:BoundField DataField="modifiedby" HeaderText="Modified By" SortExpression="modifiedby" />
+                        <asp:BoundField DataField="modifieddatetime" HeaderText="Modified Date Time" SortExpression="modifieddatetime" />
+                    </Columns>
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                </asp:GridView>
+                <asp:SqlDataSource ID="completedtasksDS" runat="server" ConnectionString="<%$ ConnectionStrings:maxdbConnectionString %>" SelectCommand="SELECT * FROM [task_tbl] WHERE ([taskstatus] = @taskstatus)">
+                    <SelectParameters>
+                        <asp:Parameter DefaultValue="Completed" Name="taskstatus" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
             </div>
         </div>
     </div>
