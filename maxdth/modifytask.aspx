@@ -39,12 +39,20 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Task Status</label>
-                            <asp:DropDownList CssClass="form-control" ID="taskstatus" runat="server">
+                            <asp:DropDownList CssClass="form-control" ID="taskstatus" runat="server" OnSelectedIndexChanged="taskstatus_SelectedIndexChanged" AutoPostBack="true">
                                 <asp:ListItem Text="-- Select Value --" Value="" />
                                 <asp:ListItem Text="Pending" Value="Pending" />
                                 <asp:ListItem Text="In Progress" Value="In Progress" />
                                 <asp:ListItem Text="Completed" Value="Completed" />
                             </asp:DropDownList>
+                            <br />
+                            <label class="form-label">Monthly Recharge Amount</label>
+                            <asp:TextBox CssClass="form-control" ID="monthlyamount" runat="server" TextMode="Number" Enabled="false"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="*Required Field" ControlToValidate="monthlyamount" Enabled="false"></asp:RequiredFieldValidator>
+                            <br />
+                            <label class="form-label">Due Date</label>
+                            <asp:TextBox CssClass="form-control" ID="duedate" runat="server" TextMode="Date" Enabled="false"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="*Required Field" ControlToValidate="duedate" Enabled="false"></asp:RequiredFieldValidator>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*Required Field" ControlToValidate="taskstatus"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-3">
@@ -62,6 +70,10 @@
                                 </asp:DropDownList>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*Required Field" ControlToValidate="taskname"></asp:RequiredFieldValidator>
                             </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Subscriber ID</label>
+                            <asp:TextBox CssClass="form-control" ID="subscriberid" runat="server"></asp:TextBox>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Customer Name</label>

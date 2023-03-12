@@ -118,7 +118,7 @@
                 <br />
                 <h5 style="color:red">List of Pending Tasks</h5>
                 <hr />
-                <asp:GridView CssClass="table-responsive table-bordered" ID="tasks" runat="server" OnSelectedIndexChanged="tasks_SelectedIndexChanged" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="taskid" DataSourceID="SqlDatapendingtasks" ForeColor="#333333" GridLines="Both" PagerStyle-BorderStyle="Solid" PagerStyle-BorderColor="#FF6600" AllowCustomPaging="True" PageSize="20" BorderStyle="Solid" BorderWidth="2">
+                <asp:GridView CssClass="table-responsive table-bordered" ID="tasks" runat="server" OnSelectedIndexChanged="tasks_SelectedIndexChanged" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="taskid" DataSourceID="SqlDatapendingtasks" ForeColor="#333333" GridLines="Both" PagerStyle-BorderStyle="Solid" AllowCustomPaging="False" PageSize="20" BorderStyle="Solid" BorderWidth="2" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" PagerStyle-HorizontalAlign="Center" PagerStyle-VerticalAlign="Middle" PagerStyle-CssClass="GridPager" FooterStyle-BorderStyle="Solid" FooterStyle-BorderWidth="2" FooterStyle-CssClass="GridPager" PagerStyle-BorderWidth="2" FooterStyle-HorizontalAlign="Center" FooterStyle-VerticalAlign="Middle">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:CheckBoxField DataField="isactive" HeaderText="Is Active" SortExpression="isactive" />
@@ -148,11 +148,14 @@
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDatapendingtasks" runat="server" ConnectionString="<%$ ConnectionStrings:maxdbConnectionString %>" SelectCommand="SELECT * FROM [task_tbl] WHERE [isactive] = 1 AND [taskstatus] != 'Completed'"></asp:SqlDataSource>
             </div>
+            
             <div>
-                <br />
-                <h5 style="color:red">List of Completed Tasks</h5>
                 <hr />
-                <asp:GridView CssClass="table-respnsive table-bordered" ID="completedtasksgridview" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BorderStyle="Solid" CellPadding="4" DataKeyNames="taskid" DataSourceID="completedtasksDS" ForeColor="#333333" GridLines="Both" BorderWidth="2" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" PageSize="30">
+                <br />
+                <br />
+                <h5 style="color:Green">List of Completed Tasks</h5>
+                <hr />
+                <asp:GridView CssClass="table-responsive table-bordered dataTables_paginate paging_simple_numbers" ID="completedtasksgridview" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BorderStyle="Solid" CellPadding="4" DataKeyNames="taskid" DataSourceID="completedtasksDS" ForeColor="#333333" GridLines="Both" BorderWidth="2" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" PageSize="30" PagerStyle-HorizontalAlign="Center" PagerStyle-VerticalAlign="Middle" PagerStyle-CssClass="GridPager" OnSelectedIndexChanged="completedtasksgridview_SelectedIndexChanged">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:CheckBoxField DataField="isactive" HeaderText="Is Active" SortExpression="isactive" />

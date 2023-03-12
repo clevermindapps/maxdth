@@ -26,12 +26,13 @@ namespace maxdth
             {
                 SqlConnection conn = new SqlConnection(strconn);
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO task_tbl(isactive,taskstatus,taskname,custname,custphone,custarea,amount,remarks,addedby,addeddatetime) values(@isactive,@taskstatus,@taskname,@custname,@custphone,@custarea,@amount,@remarks,@addedby,@addeddatetime)", conn);
+                SqlCommand cmd = new SqlCommand("INSERT INTO task_tbl(isactive,taskstatus,taskname,subscriberid,custname,custphone,custarea,amount,remarks,addedby,addeddatetime) values(@isactive,@taskstatus,@taskname,@subscriberid,@custname,@custphone,@custarea,@amount,@remarks,@addedby,@addeddatetime)", conn);
 
 
                 cmd.Parameters.AddWithValue("@isactive", "1");
                 cmd.Parameters.AddWithValue("@taskstatus", "Pending");
                 cmd.Parameters.AddWithValue("@taskname", taskname.SelectedItem.Value);
+                cmd.Parameters.AddWithValue("@subscriberid", Convert.ToInt64(subscriberid.Text.ToString()));
                 cmd.Parameters.AddWithValue("@custname", customername.Text.Trim());
                 cmd.Parameters.AddWithValue("@custphone", customerphone.Text.Trim());
                 cmd.Parameters.AddWithValue("@custarea", customerarea.Text.Trim());
@@ -55,6 +56,19 @@ namespace maxdth
             {
                 Response.Write("<Script>alert('Task Not Added')</script>");
 
+            }
+        }
+
+        protected void taskname_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(taskname.SelectedItem.Text == "Recharge")
+            {
+                subscriberid.Enabled = true;
+            }
+
+            else
+            {
+                subscriberid.Enabled=false;
             }
         }
     }

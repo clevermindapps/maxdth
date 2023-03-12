@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div>
-                    <asp:GridView CssClass="table-responsive table-bordered" ID="duereportgridview" runat="server" CellPadding="4" ForeColor="#333333" AllowPaging="True" PageSize="20" BorderStyle="Solid" BorderWidth="2" AllowSorting="True" AutoGenerateColumns="False">
+                    <asp:GridView CssClass="table-responsive table-bordered" ID="duereportgridview" runat="server" CellPadding="4" ForeColor="#333333" AllowPaging="True" PageSize="20" BorderStyle="Solid" BorderWidth="2" AllowSorting="True" AutoGenerateColumns="False" OnSelectedIndexChanged="duereportgridview_SelectedIndexChanged" FooterStyle-CssClass="GridPager" PagerStyle-CssClass="GridPager" OnPageIndexChanging="duereportgridview_PageIndexChanging">
                         <AlternatingRowStyle BackColor="White" />
                         <EditRowStyle BackColor="#2461BF" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

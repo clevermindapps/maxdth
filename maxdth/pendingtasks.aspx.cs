@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection.Emit;
@@ -90,6 +91,11 @@ namespace maxdth
         }
 
         protected void tasks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void completedtasksgridview_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

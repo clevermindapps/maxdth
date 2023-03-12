@@ -8,7 +8,7 @@
                 <h5 style="color:red">Travel Report</h5>
                 <hr />
                 <div>
-                    <asp:GridView CssClass="table-responsive table-bordered" ID="adminviewtravelgridview" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="travelid" DataSourceID="admintravelreportDS" ForeColor="#333333" GridLines="Both" BorderStyle="Solid" BorderWidth="2" PageSize="20" HeaderStyle-HorizontalAlign="Center">
+                    <asp:GridView CssClass="table-responsive table-bordered" ID="adminviewtravelgridview" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="travelid" DataSourceID="admintravelreportDS" ForeColor="#333333" GridLines="Both" BorderStyle="Solid" BorderWidth="2" PageSize="20" HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="GridPager" PagerStyle-HorizontalAlign="Center">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:CheckBoxField DataField="isactive" HeaderText="Is Active" SortExpression="isactive" />

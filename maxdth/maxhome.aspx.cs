@@ -192,5 +192,10 @@ namespace maxdth
         {
             Response.Redirect("adminviewtravelpayment.aspx");
         }
+
+        protected void newconnectionlink_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("newconnectionentry.aspx");
+        }
     }
 }

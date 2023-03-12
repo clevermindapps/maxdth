@@ -21,7 +21,7 @@
                             <label class="form-label">Task Name</label>
                             <!--Drop Down-->
                             <div class="form-group">
-                                <asp:DropDownList CssClass="form-control" ID="taskname" runat="server">
+                                <asp:DropDownList CssClass="form-control" ID="taskname" runat="server" OnSelectedIndexChanged="taskname_SelectedIndexChanged" AutoPostBack="true">
                                     <asp:ListItem Text="-- Select Task Name --" Value="" />
                                     <asp:ListItem Text="New Connection" Value="New Connection" />
                                     <asp:ListItem Text="Service" Value="Service" />
@@ -30,6 +30,9 @@
                                     <asp:ListItem Text="Accessories" Value="Accessories" />
                                     <asp:ListItem Text="Pending Amount" Value="Pending Amount" />
                                 </asp:DropDownList>
+                                <br />
+                                <label class="form-label">Subscriber ID</label>
+                                <asp:TextBox CssClass="form-control" ID="subscriberid" runat="server" Enabled="false"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Required Field" ControlToValidate="taskname"></asp:RequiredFieldValidator>
                             </div>
                         </div>
