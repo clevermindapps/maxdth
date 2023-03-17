@@ -73,7 +73,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Subscriber ID</label>
-                            <asp:TextBox CssClass="form-control" ID="subscriberid" runat="server"></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="subscriberid" runat="server" TextMode="Number" ReadOnly="True"></asp:TextBox>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Customer Name</label>

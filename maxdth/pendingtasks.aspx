@@ -118,22 +118,24 @@
                 <br />
                 <h5 style="color:red">List of Pending Tasks</h5>
                 <hr />
-                <asp:GridView CssClass="table-responsive table-bordered" ID="tasks" runat="server" OnSelectedIndexChanged="tasks_SelectedIndexChanged" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="taskid" DataSourceID="SqlDatapendingtasks" ForeColor="#333333" GridLines="Both" PagerStyle-BorderStyle="Solid" AllowCustomPaging="False" PageSize="20" BorderStyle="Solid" BorderWidth="2" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" PagerStyle-HorizontalAlign="Center" PagerStyle-VerticalAlign="Middle" PagerStyle-CssClass="GridPager" FooterStyle-BorderStyle="Solid" FooterStyle-BorderWidth="2" FooterStyle-CssClass="GridPager" PagerStyle-BorderWidth="2" FooterStyle-HorizontalAlign="Center" FooterStyle-VerticalAlign="Middle">
+                <asp:GridView CssClass="table-responsive table-bordered" ID="tasks" runat="server" OnSelectedIndexChanged="tasks_SelectedIndexChanged" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="taskid" DataSourceID="SqlDatapendingtasks" ForeColor="#333333" PagerStyle-BorderStyle="Solid" PageSize="20" BorderStyle="Solid" BorderWidth="2px" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" PagerStyle-HorizontalAlign="Center" PagerStyle-VerticalAlign="Middle" PagerStyle-CssClass="GridPager" FooterStyle-BorderStyle="Solid" FooterStyle-BorderWidth="2" FooterStyle-CssClass="GridPager" PagerStyle-BorderWidth="2" FooterStyle-HorizontalAlign="Center" FooterStyle-VerticalAlign="Middle">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:CheckBoxField DataField="isactive" HeaderText="Is Active" SortExpression="isactive" />
-                        <asp:BoundField DataField="taskid" HeaderText="Task ID" InsertVisible="False" ReadOnly="True" SortExpression="taskid" />
-                        <asp:BoundField DataField="taskstatus" HeaderText="Task Status" SortExpression="taskstatus" />
-                        <asp:BoundField DataField="taskname" HeaderText="Task Name" SortExpression="taskname" />
-                        <asp:BoundField DataField="custname" HeaderText="Customer Name" SortExpression="custname" />
-                        <asp:BoundField DataField="custphone" HeaderText="Customer Phone" SortExpression="custphone" />
-                        <asp:BoundField DataField="custarea" HeaderText="Customer Area" SortExpression="custarea" />
-                        <asp:BoundField DataField="amount" HeaderText="Amount Received" SortExpression="amount" />
-                        <asp:BoundField DataField="remarks" HeaderText="Remarks" SortExpression="remarks" />
-                        <asp:BoundField DataField="addedby" HeaderText="Added By" SortExpression="addedby" />
-                        <asp:BoundField DataField="addeddatetime" HeaderText="Added Date &amp; Time" SortExpression="addeddatetime" />
-                        <asp:BoundField DataField="modifiedby" HeaderText="Modified By" SortExpression="modifiedby" />
-                        <asp:BoundField DataField="modifieddatetime" HeaderText="Modified Date &amp; Time" SortExpression="modifieddatetime" />
+                        <asp:CheckBoxField DataField="isactive" HeaderText="isactive" SortExpression="isactive" />
+                        <asp:BoundField DataField="taskid" HeaderText="taskid" InsertVisible="False" ReadOnly="True" SortExpression="taskid" />
+                        <asp:BoundField DataField="taskstatus" HeaderText="taskstatus" SortExpression="taskstatus" />
+                        <asp:BoundField DataField="taskname" HeaderText="taskname" SortExpression="taskname" />
+                        <asp:BoundField DataField="subscriberid" HeaderText="subscriberid" SortExpression="subscriberid"></asp:BoundField>
+                        <asp:BoundField DataField="custname" HeaderText="custname" SortExpression="custname" />
+                        <asp:BoundField DataField="custphone" HeaderText="custphone" SortExpression="custphone" />
+                        <asp:BoundField DataField="custarea" HeaderText="custarea" SortExpression="custarea" />
+                        <asp:BoundField DataField="amount" HeaderText="amount" SortExpression="amount" />
+                        <asp:BoundField DataField="remarks" HeaderText="remarks" SortExpression="remarks" />
+                        <asp:BoundField DataField="addedby" HeaderText="addedby" SortExpression="addedby" />
+                        <asp:BoundField DataField="addeddatetime" HeaderText="addeddatetime" SortExpression="addeddatetime" />
+                        <asp:BoundField DataField="modifiedby" HeaderText="modifiedby" SortExpression="modifiedby" />
+                        <asp:BoundField DataField="modifieddatetime" HeaderText="modifieddatetime" SortExpression="modifieddatetime" />
+                        <asp:BoundField DataField="subscriberid" HeaderText="Subscriber ID" SortExpression="subscriberid"></asp:BoundField>
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -155,22 +157,23 @@
                 <br />
                 <h5 style="color:Green">List of Completed Tasks</h5>
                 <hr />
-                <asp:GridView CssClass="table-responsive table-bordered dataTables_paginate paging_simple_numbers" ID="completedtasksgridview" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BorderStyle="Solid" CellPadding="4" DataKeyNames="taskid" DataSourceID="completedtasksDS" ForeColor="#333333" GridLines="Both" BorderWidth="2" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" PageSize="30" PagerStyle-HorizontalAlign="Center" PagerStyle-VerticalAlign="Middle" PagerStyle-CssClass="GridPager" OnSelectedIndexChanged="completedtasksgridview_SelectedIndexChanged">
+                <asp:GridView CssClass="table-responsive table-bordered dataTables_paginate paging_simple_numbers" ID="completedtasksgridview" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BorderStyle="Solid" CellPadding="4" DataKeyNames="taskid" DataSourceID="completedtasksDS" ForeColor="#333333" BorderWidth="2px" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" PageSize="30" PagerStyle-HorizontalAlign="Center" PagerStyle-VerticalAlign="Middle" PagerStyle-CssClass="GridPager" OnSelectedIndexChanged="completedtasksgridview_SelectedIndexChanged">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:CheckBoxField DataField="isactive" HeaderText="Is Active" SortExpression="isactive" />
-                        <asp:BoundField DataField="taskid" HeaderText="Task ID" InsertVisible="False" ReadOnly="True" SortExpression="taskid" />
-                        <asp:BoundField DataField="taskstatus" HeaderText="Task Status" SortExpression="taskstatus" />
-                        <asp:BoundField DataField="taskname" HeaderText="Task Name" SortExpression="taskname" />
-                        <asp:BoundField DataField="custname" HeaderText="Cust Name" SortExpression="custname" />
-                        <asp:BoundField DataField="custphone" HeaderText="Cust Phone" SortExpression="custphone" />
-                        <asp:BoundField DataField="custarea" HeaderText="Cust Area" SortExpression="custarea" />
-                        <asp:BoundField DataField="amount" HeaderText="Amount" SortExpression="amount" />
-                        <asp:BoundField DataField="remarks" HeaderText="Remarks" SortExpression="remarks" />
-                        <asp:BoundField DataField="addedby" HeaderText="Added By" SortExpression="addedby" />
-                        <asp:BoundField DataField="addeddatetime" HeaderText="Added Date Time" SortExpression="addeddatetime" />
-                        <asp:BoundField DataField="modifiedby" HeaderText="Modified By" SortExpression="modifiedby" />
-                        <asp:BoundField DataField="modifieddatetime" HeaderText="Modified Date Time" SortExpression="modifieddatetime" />
+                        <asp:CheckBoxField DataField="isactive" HeaderText="isactive" SortExpression="isactive" />
+                        <asp:BoundField DataField="taskid" HeaderText="taskid" InsertVisible="False" ReadOnly="True" SortExpression="taskid" />
+                        <asp:BoundField DataField="taskstatus" HeaderText="taskstatus" SortExpression="taskstatus" />
+                        <asp:BoundField DataField="taskname" HeaderText="taskname" SortExpression="taskname" />
+                        <asp:BoundField DataField="subscriberid" HeaderText="subscriberid" SortExpression="subscriberid"></asp:BoundField>
+                        <asp:BoundField DataField="custname" HeaderText="custname" SortExpression="custname" />
+                        <asp:BoundField DataField="custphone" HeaderText="custphone" SortExpression="custphone" />
+                        <asp:BoundField DataField="custarea" HeaderText="custarea" SortExpression="custarea" />
+                        <asp:BoundField DataField="amount" HeaderText="amount" SortExpression="amount" />
+                        <asp:BoundField DataField="remarks" HeaderText="remarks" SortExpression="remarks" />
+                        <asp:BoundField DataField="addedby" HeaderText="addedby" SortExpression="addedby" />
+                        <asp:BoundField DataField="addeddatetime" HeaderText="addeddatetime" SortExpression="addeddatetime" />
+                        <asp:BoundField DataField="modifiedby" HeaderText="modifiedby" SortExpression="modifiedby" />
+                        <asp:BoundField DataField="modifieddatetime" HeaderText="modifieddatetime" SortExpression="modifieddatetime" />
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

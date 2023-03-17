@@ -185,6 +185,79 @@ namespace maxdth
                     }
                     else
                     {
+                        if (subscriberid.Text != "null")
+                        {
+                            SqlConnection con = new SqlConnection(strconn);
+                            con.Open();
+                            SqlCommand com = new SqlCommand("UPDATE task_tbl SET isactive=@isactive,taskstatus=@taskstatus,taskname=@taskname,subscriberid=@subscriberid,custname=@custname,amount=@amount,custphone=@custphone,custarea=@custarea,remarks=@remarks,modifiedby=@modifiedby,modifieddatetime=@modifieddatetime WHERE taskid=" + Convert.ToInt32(taskid.Text.Trim()), con);
+
+                            com.Parameters.AddWithValue("@isactive", isactive.SelectedItem.Value);
+                            com.Parameters.AddWithValue("@taskstatus", taskstatus.SelectedItem.Value);
+                            com.Parameters.AddWithValue("@taskname", taskname.SelectedItem.Value);
+                            com.Parameters.AddWithValue("@subscriberid", Convert.ToInt64(subscriberid.Text.Trim()));
+                            com.Parameters.AddWithValue("@custname", customername.Text.Trim());
+                            com.Parameters.AddWithValue("@custphone", customerphone.Text.Trim());
+                            com.Parameters.AddWithValue("@custarea", customerarea.Text.Trim());
+                            com.Parameters.AddWithValue("@amount", Convert.ToInt32(amount.Text.Trim()));
+                            com.Parameters.AddWithValue("@remarks", remarks.Text.Trim());
+                            com.Parameters.AddWithValue("@modifiedby", Session["fullname"].ToString());
+                            com.Parameters.AddWithValue("@modifieddatetime", modifieddatetime);
+                            com.ExecuteNonQuery();
+                            con.Close();
+                            Response.Write("<Script>alert('Task Modified Successfully')</script>");
+
+                            taskid.Text = "";
+                            isactive.ClearSelection();
+                            taskstatus.ClearSelection();
+                            taskname.ClearSelection();
+                            customername.Text = "";
+                            customerphone.Text = "";
+                            customerarea.Text = "";
+                            amount.Text = "";
+                            remarks.Text = "";
+                            subscriberid.Text = "";
+                            monthlyamount.Text = "";
+                            duedate.Text = "";
+                        }
+                        else
+                        {
+                            SqlConnection con = new SqlConnection(strconn);
+                            con.Open();
+                            SqlCommand com = new SqlCommand("UPDATE task_tbl SET isactive=@isactive,taskstatus=@taskstatus,taskname=@taskname,custname=@custname,amount=@amount,custphone=@custphone,custarea=@custarea,remarks=@remarks,modifiedby=@modifiedby,modifieddatetime=@modifieddatetime WHERE taskid=" + Convert.ToInt32(taskid.Text.Trim()), con);
+
+                            com.Parameters.AddWithValue("@isactive", isactive.SelectedItem.Value);
+                            com.Parameters.AddWithValue("@taskstatus", taskstatus.SelectedItem.Value);
+                            com.Parameters.AddWithValue("@taskname", taskname.SelectedItem.Value);
+                            com.Parameters.AddWithValue("@custname", customername.Text.Trim());
+                            com.Parameters.AddWithValue("@custphone", customerphone.Text.Trim());
+                            com.Parameters.AddWithValue("@custarea", customerarea.Text.Trim());
+                            com.Parameters.AddWithValue("@amount", Convert.ToInt32(amount.Text.Trim()));
+                            com.Parameters.AddWithValue("@remarks", remarks.Text.Trim());
+                            com.Parameters.AddWithValue("@modifiedby", Session["fullname"].ToString());
+                            com.Parameters.AddWithValue("@modifieddatetime", modifieddatetime);
+                            com.ExecuteNonQuery();
+                            con.Close();
+                            Response.Write("<Script>alert('Task Modified Successfully')</script>");
+
+                            taskid.Text = "";
+                            isactive.ClearSelection();
+                            taskstatus.ClearSelection();
+                            taskname.ClearSelection();
+                            customername.Text = "";
+                            customerphone.Text = "";
+                            customerarea.Text = "";
+                            amount.Text = "";
+                            remarks.Text = "";
+                            subscriberid.Text = "";
+                            monthlyamount.Text = "";
+                            duedate.Text = "";
+                        }
+                    }
+                }
+                else
+                {
+                    if (subscriberid.Text != "")
+                    {
                         SqlConnection con = new SqlConnection(strconn);
                         con.Open();
                         SqlCommand com = new SqlCommand("UPDATE task_tbl SET isactive=@isactive,taskstatus=@taskstatus,taskname=@taskname,subscriberid=@subscriberid,custname=@custname,amount=@amount,custphone=@custphone,custarea=@custarea,remarks=@remarks,modifiedby=@modifiedby,modifieddatetime=@modifieddatetime WHERE taskid=" + Convert.ToInt32(taskid.Text.Trim()), con);
@@ -214,39 +287,44 @@ namespace maxdth
                         customerarea.Text = "";
                         amount.Text = "";
                         remarks.Text = "";
+                        subscriberid.Text = "";
+                        monthlyamount.Text = "";
+                        duedate.Text = "";
                     }
-                }
-                else
-                {
-                    SqlConnection con = new SqlConnection(strconn);
-                    con.Open();
-                    SqlCommand com = new SqlCommand("UPDATE task_tbl SET isactive=@isactive,taskstatus=@taskstatus,taskname=@taskname,subscriberid=@subscriberid,custname=@custname,amount=@amount,custphone=@custphone,custarea=@custarea,remarks=@remarks,modifiedby=@modifiedby,modifieddatetime=@modifieddatetime WHERE taskid=" + Convert.ToInt32(taskid.Text.Trim()), con);
+                    else
+                    {
+                        SqlConnection con = new SqlConnection(strconn);
+                        con.Open();
+                        SqlCommand com = new SqlCommand("UPDATE task_tbl SET isactive=@isactive,taskstatus=@taskstatus,taskname=@taskname,custname=@custname,amount=@amount,custphone=@custphone,custarea=@custarea,remarks=@remarks,modifiedby=@modifiedby,modifieddatetime=@modifieddatetime WHERE taskid=" + Convert.ToInt32(taskid.Text.Trim()), con);
 
 
-                    com.Parameters.AddWithValue("@isactive", isactive.SelectedItem.Value);
-                    com.Parameters.AddWithValue("@taskstatus", taskstatus.SelectedItem.Value);
-                    com.Parameters.AddWithValue("@taskname", taskname.SelectedItem.Value);
-                    com.Parameters.AddWithValue("@subscriberid", Convert.ToInt64(subscriberid.Text.Trim()));
-                    com.Parameters.AddWithValue("@custname", customername.Text.Trim());
-                    com.Parameters.AddWithValue("@custphone", customerphone.Text.Trim());
-                    com.Parameters.AddWithValue("@custarea", customerarea.Text.Trim());
-                    com.Parameters.AddWithValue("@amount", Convert.ToInt32(amount.Text.Trim()));
-                    com.Parameters.AddWithValue("@remarks", remarks.Text.Trim());
-                    com.Parameters.AddWithValue("@modifiedby", Session["fullname"].ToString());
-                    com.Parameters.AddWithValue("@modifieddatetime", modifieddatetime);
-                    com.ExecuteNonQuery();
-                    con.Close();
-                    Response.Write("<Script>alert('Task Modified Successfully')</script>");
+                        com.Parameters.AddWithValue("@isactive", isactive.SelectedItem.Value);
+                        com.Parameters.AddWithValue("@taskstatus", taskstatus.SelectedItem.Value);
+                        com.Parameters.AddWithValue("@taskname", taskname.SelectedItem.Value);
+                        com.Parameters.AddWithValue("@custname", customername.Text.Trim());
+                        com.Parameters.AddWithValue("@custphone", customerphone.Text.Trim());
+                        com.Parameters.AddWithValue("@custarea", customerarea.Text.Trim());
+                        com.Parameters.AddWithValue("@amount", Convert.ToInt32(amount.Text.Trim()));
+                        com.Parameters.AddWithValue("@remarks", remarks.Text.Trim());
+                        com.Parameters.AddWithValue("@modifiedby", Session["fullname"].ToString());
+                        com.Parameters.AddWithValue("@modifieddatetime", modifieddatetime);
+                        com.ExecuteNonQuery();
+                        con.Close();
+                        Response.Write("<Script>alert('Task Modified Successfully')</script>");
 
-                    taskid.Text = "";
-                    isactive.ClearSelection();
-                    taskstatus.ClearSelection();
-                    taskname.ClearSelection();
-                    customername.Text = "";
-                    customerphone.Text = "";
-                    customerarea.Text = "";
-                    amount.Text = "";
-                    remarks.Text = "";
+                        taskid.Text = "";
+                        isactive.ClearSelection();
+                        taskstatus.ClearSelection();
+                        taskname.ClearSelection();
+                        customername.Text = "";
+                        customerphone.Text = "";
+                        customerarea.Text = "";
+                        amount.Text = "";
+                        remarks.Text = "";
+                        subscriberid.Text = "";
+                        monthlyamount.Text = "";
+                        duedate.Text = "";
+                    }
                 }
             }
             catch (Exception)
@@ -260,10 +338,22 @@ namespace maxdth
         {
             if(taskstatus.SelectedItem.Text == "Completed")
             {
-                monthlyamount.Enabled = true;
-                RequiredFieldValidator9.Enabled = true;
-                duedate.Enabled= true;
-                RequiredFieldValidator10.Enabled = true;
+                if (taskname.SelectedItem.Text == "Recharge")
+                {
+                    monthlyamount.Enabled = true;
+                    RequiredFieldValidator9.Enabled = true;
+                    duedate.Enabled = true;
+                    RequiredFieldValidator10.Enabled = true;
+                }
+                else
+                {
+                    monthlyamount.Enabled = false;
+                    RequiredFieldValidator9.Enabled = false;
+                    duedate.Enabled = false;
+                    RequiredFieldValidator10.Enabled = false;
+                    subscriberid.Enabled = false;
+                }
+                
             }
             else
             {
@@ -271,6 +361,7 @@ namespace maxdth
                 RequiredFieldValidator9.Enabled = false;
                 duedate.Enabled = false;
                 RequiredFieldValidator10.Enabled = false;
+                subscriberid.Enabled = false;
             }
         }
     }

@@ -268,7 +268,7 @@
                                     <div class="d-flex align-items-center">
                                         <div>
                                             <%--3/2--%>
-                                            <p class="text-danger">Conn Graph</p>
+                                            <p class="text-danger">Ovrall Reprt</p>
                                         </div>
                                         <div class="widgets-icons-2 rounded-circle bg-gradient-bloody text-white ms-auto">
                                             <i class='bx bx-bar-chart-square'></i>

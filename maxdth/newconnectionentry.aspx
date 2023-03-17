@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="newconnectionentry.aspx.cs" Inherits="maxdth.newconnectionentry" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!-- wrapper -->
     <div class="wrapper">
@@ -11,24 +12,15 @@
                     <div class="card-body">
                         <div class="text-start">
                             <center>
-                                
                             </center>
                         </div>
                         <center>
                             <h4 class="mt-3 font-weight-bold">Add New Connection Details</h4>
                         </center>
                         <div class="mb-3 mt-3">
-                            <label class="form-label">Month Code and Name</label>
+                            <label class="form-label">Month Name</label>
                             <asp:DropDownList CssClass="form-control" ID="monthcodename" runat="server"></asp:DropDownList>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Required Field" ControlToValidate="monthcodename"></asp:RequiredFieldValidator>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">DTH Operator</label>
-                            <asp:DropDownList CssClass="form-control" ID="dthoperator" runat="server">
-                                <asp:ListItem Text="-- Select DTH Operator --" Value="" />
-                                <asp:ListItem Text="TATA PLAY" Value="TATA PLAY" />
-                            </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="rfvdthoperator" runat="server" ErrorMessage="*Required Field" ControlToValidate="dthoperator" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">New Connection Type</label>
@@ -41,26 +33,6 @@
                                 <asp:ListItem Text="Binge Box Set" Value="Binge Box Set" />
                             </asp:DropDownList>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*Required Field" ControlToValidate="connectiontype"></asp:RequiredFieldValidator>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Pack Details</label>
-                            <asp:TextBox CssClass="form-control" ID="packdetails" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*Required Field" ControlToValidate="packdetails"></asp:RequiredFieldValidator>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Connection Given Date</label>
-                            <asp:TextBox CssClass="form-control" ID="congivendate" runat="server" TextMode="Date"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*Required Field" ControlToValidate="congivendate"></asp:RequiredFieldValidator>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Monthly Recharge Amount</label>
-                            <asp:TextBox CssClass="form-control" ID="monthlyamount" runat="server" TextMode="Number"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*Required Field" ControlToValidate="monthlyamount"></asp:RequiredFieldValidator>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Due Date</label>
-                            <asp:TextBox CssClass="form-control" ID="duedate" runat="server" TextMode="Date"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*Required Field" ControlToValidate="duedate"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Customer Name</label>
@@ -86,6 +58,26 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ErrorMessage="*Required Field" ControlToValidate="subscriberid"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-3">
+                            <label class="form-label">Pack Details</label>
+                            <asp:TextBox CssClass="form-control" ID="packdetails" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*Required Field" ControlToValidate="packdetails"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Connection Given Date</label>
+                            <asp:TextBox CssClass="form-control" ID="congivendate" runat="server" TextMode="Date"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*Required Field" ControlToValidate="congivendate"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Monthly Recharge Amount</label>
+                            <asp:TextBox CssClass="form-control" ID="monthlyamount" runat="server" TextMode="Number"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*Required Field" ControlToValidate="monthlyamount"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Due Date</label>
+                            <asp:TextBox CssClass="form-control" ID="duedate" runat="server" TextMode="Date"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*Required Field" ControlToValidate="duedate"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label">Promoter Name</label>
                             <asp:DropDownList CssClass="form-control" ID="promoterlist" runat="server"></asp:DropDownList>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage="*Required Field" ControlToValidate="promoterlist"></asp:RequiredFieldValidator>
@@ -94,10 +86,6 @@
                             <label class="form-label">Sales Person Name</label>
                             <asp:TextBox CssClass="form-control" ID="salesperson" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="*Required Field" ControlToValidate="salesperson"></asp:RequiredFieldValidator>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Remarks</label>
-                            <asp:TextBox CssClass="form-control" ID="remarks" runat="server" TextMode="MultiLine"></asp:TextBox>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Actual Price</label>
@@ -124,9 +112,13 @@
                             <asp:TextBox CssClass="form-control" ID="evdamount" runat="server" TextMode="Number"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator18" runat="server" ErrorMessage="*Required Field" ControlToValidate="evdamount"></asp:RequiredFieldValidator>
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label">Remarks</label>
+                            <asp:TextBox CssClass="form-control" ID="remarks" runat="server" TextMode="MultiLine"></asp:TextBox>
+                        </div>
                         <div class="d-grid gap-2">
                             <!--Button-->
-                            <asp:Button CssClass="form-control btn btn-primary" ID="addconnectionbutton" runat="server" Text="Add Connection Details" OnClick="addconnectionbutton_Click"/>
+                            <asp:Button CssClass="form-control btn btn-primary" ID="addconnectionbutton" runat="server" Text="Add Connection Details" OnClick="addconnectionbutton_Click" />
                         </div>
                     </div>
                 </div>
