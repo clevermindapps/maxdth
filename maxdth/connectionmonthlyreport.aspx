@@ -15,7 +15,23 @@
                 </div>
                 <hr />
                 <div class="mb-3 mt-3">
-                    <asp:GridView ID="monthlyactivationsgridview" runat="server" AllowSorting="True" AllowPaging="True" PageSize="20" BorderStyle="Solid" BorderWidth="2" BorderColor="Black" CssClass="table-responsive table-bordered" RowStyle-BorderColor="#000066" RowStyle-BorderStyle="Solid" RowStyle-BorderWidth="2" EditRowStyle-HorizontalAlign="Left" EditRowStyle-VerticalAlign="Middle" EditRowStyle-Wrap="True" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" OnSelectedIndexChanged="monthlyactivationsgridview_SelectedIndexChanged"></asp:GridView>
+                    <asp:GridView ID="monthlyactivationsgridview" runat="server" AllowSorting="True" AllowPaging="True" PageSize="20" CssClass="table-responsive table-bordered" RowStyle-BorderColor="#000066" RowStyle-BorderStyle="Solid" RowStyle-BorderWidth="2" EditRowStyle-HorizontalAlign="Left" EditRowStyle-VerticalAlign="Middle" EditRowStyle-Wrap="True" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" CellPadding="4" ForeColor="#333333" GridLines="None">
+                        <AlternatingRowStyle BackColor="White" />
+<EditRowStyle HorizontalAlign="Left" VerticalAlign="Middle" Wrap="True" BackColor="#2461BF"></EditRowStyle>
+
+                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+
+<HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" BackColor="#507CD1" Font-Bold="True" ForeColor="White"></HeaderStyle>
+
+                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+
+<RowStyle BorderColor="#000066" BorderWidth="2px" BorderStyle="Solid" BackColor="#EFF3FB"></RowStyle>
+                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                    </asp:GridView>
                 </div>
                 <div class="mb-3">
                     <h4>Total Activations: <asp:Label ID="monthlyactivationslabel" runat="server" Text=""></asp:Label></h4>
