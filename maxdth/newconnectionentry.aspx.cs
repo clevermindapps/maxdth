@@ -32,7 +32,7 @@ namespace maxdth
         {
             SqlConnection conmname = new SqlConnection(strconn);
             conmname.Open();
-            monthcode = "select * from monthcode_tbl";
+            monthcode = "select * from monthcode_tbl order by monthname DESC";
             SqlCommand com = new SqlCommand(monthcode, conmname);
             com.CommandType = CommandType.Text;
             monthcodename.DataSource = com.ExecuteReader();
@@ -46,7 +46,7 @@ namespace maxdth
         {
             SqlConnection conpro = new SqlConnection(strconn);
             conpro.Open();
-            promoter = "select dealerid, dealername from dealer_tbl";
+            promoter = "select dealerid, dealername from dealer_tbl order by dealername ASC";
             SqlCommand com = new SqlCommand(promoter, conpro);
             com.CommandType = CommandType.Text;
             promoterlist.DataSource = com.ExecuteReader();
@@ -74,7 +74,7 @@ namespace maxdth
         {
             SqlConnection conarea = new SqlConnection(strconn);
             conarea.Open();
-            town = "select townid, townname from town_tbl";
+            town = "select townid, townname from town_tbl order by townname ASC";
             SqlCommand com = new SqlCommand(town, conarea);
             com.CommandType = CommandType.Text;
             customerareadropdown.DataSource = com.ExecuteReader();
