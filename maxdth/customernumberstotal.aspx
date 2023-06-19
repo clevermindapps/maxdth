@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-body">
                         <center>
-                            <h4 class="mt-3 font-weight-bold">Total Customer Numbers</h4>
+                            <h6 class="mt-3 font-weight-bold">Customer Numbers (Total[<asp:Label ID="totallbl" runat="server" Text=""></asp:Label>] - Paid[<asp:Label ID="paidlbl" runat="server" Text=""></asp:Label>] = Pending[<asp:Label ID="pendinglbl" runat="server" Text=""></asp:Label>])</h6>
                         </center>
                         <div class="mb-3 mt-3">
                             <div class="form-group">
@@ -18,14 +18,14 @@
                                         <asp:GridView CssClass="table-responsive table-bordered dataTables_paginate paging_simple_numbers" ID="totalcustnumbers" runat="server" AutoGenerateColumns="False" DataKeyNames="sno" DataSourceID="SqlDataSource1" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" AllowPaging="True" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None" PageSize="20" BorderWidth="2px" PagerStyle-HorizontalAlign="Center" PagerStyle-VerticalAlign="Middle" PagerStyle-CssClass="GridPager">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:BoundField DataField="sno" HeaderText="sno" ReadOnly="True" InsertVisible="False" SortExpression="sno"></asp:BoundField>
-                                                <asp:BoundField DataField="customerphone" HeaderText="customerphone" SortExpression="customerphone"></asp:BoundField>
-                                                <asp:CheckBoxField DataField="ispaid" HeaderText="ispaid" SortExpression="ispaid"></asp:CheckBoxField>
-                                                <asp:CheckBoxField DataField="isconverted" HeaderText="isconverted" SortExpression="isconverted"></asp:CheckBoxField>
-                                                <asp:BoundField DataField="addedby" HeaderText="addedby" SortExpression="addedby"></asp:BoundField>
-                                                <asp:BoundField DataField="addeddatetime" HeaderText="addeddatetime" SortExpression="addeddatetime"></asp:BoundField>
-                                                <asp:BoundField DataField="modifiedby" HeaderText="modifiedby" SortExpression="modifiedby"></asp:BoundField>
-                                                <asp:BoundField DataField="modifieddatetime" HeaderText="modifieddatetime" SortExpression="modifieddatetime"></asp:BoundField>
+                                                <asp:BoundField DataField="sno" HeaderText="S No" ReadOnly="True" InsertVisible="False" SortExpression="sno"></asp:BoundField>
+                                                <asp:BoundField DataField="customerphone" HeaderText="Customer Phone" SortExpression="customerphone"></asp:BoundField>
+                                                <asp:CheckBoxField DataField="ispaid" HeaderText="Is Paid" SortExpression="ispaid"></asp:CheckBoxField>
+                                                <asp:CheckBoxField DataField="isconverted" HeaderText="Is Converted" SortExpression="isconverted"></asp:CheckBoxField>
+                                                <asp:BoundField DataField="addedby" HeaderText="Added By" SortExpression="addedby"></asp:BoundField>
+                                                <asp:BoundField DataField="addeddatetime" HeaderText="Added DateTime" SortExpression="addeddatetime"></asp:BoundField>
+                                                <asp:BoundField DataField="modifiedby" HeaderText="Modified By" SortExpression="modifiedby"></asp:BoundField>
+                                                <asp:BoundField DataField="modifieddatetime" HeaderText="Mified DateTime" SortExpression="modifieddatetime"></asp:BoundField>
                                             </Columns>
                                             <EditRowStyle BackColor="#2461BF" />
                                         <FooterStyle BackColor="#507CD1" Font-Bold="true" ForeColor="White" />

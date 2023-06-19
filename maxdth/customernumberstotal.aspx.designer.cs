@@ -15,6 +15,33 @@ namespace maxdth
     {
 
         /// <summary>
+        /// totallbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label totallbl;
+
+        /// <summary>
+        /// paidlbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label paidlbl;
+
+        /// <summary>
+        /// pendinglbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label pendinglbl;
+
+        /// <summary>
         /// totalcustnumbers control.
         /// </summary>
         /// <remarks>
