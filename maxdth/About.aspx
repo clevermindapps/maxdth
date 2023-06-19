@@ -66,8 +66,51 @@
             <br />
             <br />
             <br />
+
+             <section>
+        <div class="row">
+            <div class="col-12">
+                <br />
+                <br />
+                <br />
+                <asp:Label ID="Label1" runat="server" Text="To Display User Details"></asp:Label><br />
+
+                <asp:Button ID="userbtn" runat="server" Text="Click Here" OnClick="userbtn_Click" /><br />
+                <br />
+
+                <asp:GridView ID="usertbl" runat="server"></asp:GridView>
+            </div>
         </div>
+    </section>
 
+    <section>
+         <div class="row">
+            <div class="col-12">
+                <asp:Label ID="Label2" runat="server" Text="Count & Disply Data"></asp:Label>
+                <asp:TextBox ID="empid" runat="server"></asp:TextBox>
+                <asp:Button ID="Show" runat="server" Text="Button" OnClick="Show_Click" />
+                <asp:GridView ID="atndscount" runat="server"></asp:GridView>
+               
+                </div>
+             </div>
+    </section>
+     <section>
+         <div class="row">
+            <div class="col-12">
+                <asp:Label ID="Label3" runat="server" Text="Total Amount Of Travel Payment" OnLoad="Label3_Load"></asp:Label>
+               <%-- <asp:Button ID="sum" runat="server" Text="Button" OnClick="sum_Click" />--%>
+                <asp:GridView ID="amount" runat="server"></asp:GridView>
+               
+               
+                </div>
+             </div>
+    </section>
 
+        </div>
     </div>
+
+
+  
+   
+
 </asp:Content>
