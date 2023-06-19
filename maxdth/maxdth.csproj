@@ -125,6 +125,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="customernumbers.aspx" />
+    <Content Include="customernumberslist.aspx" />
+    <Content Include="customernumberstotal.aspx" />
     <Content Include="dealeradd.aspx" />
     <Content Include="dealermodify.aspx" />
     <Content Include="dealerslist.aspx" />
@@ -448,6 +450,20 @@
     </Compile>
     <Compile Include="customernumbers.aspx.designer.cs">
       <DependentUpon>customernumbers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customernumberslist.aspx.cs">
+      <DependentUpon>customernumberslist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customernumberslist.aspx.designer.cs">
+      <DependentUpon>customernumberslist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customernumberstotal.aspx.cs">
+      <DependentUpon>customernumberstotal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customernumberstotal.aspx.designer.cs">
+      <DependentUpon>customernumberstotal.aspx</DependentUpon>
     </Compile>
     <Compile Include="dealeradd.aspx.cs">
       <DependentUpon>dealeradd.aspx</DependentUpon>
