@@ -23,41 +23,49 @@ namespace maxdth
         {
             try
             {
-                SqlConnection conn = new SqlConnection(strconn);
-                conn.Open();
-                string sql = "select * from custphnumbers where customerphone=@customerphone";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@customerphone", Convert.ToInt64(contactnumber.Text));
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
+                long phonenumcheck = Convert.ToInt64(contactnumber.Text.Trim());
+                if (phonenumcheck > 5999999999 && phonenumcheck < 10000000000)
                 {
-                    Response.Write("<Script>alert('This phone number is already taken , please enter another phone number')</script>");
-                    conn.Close();
+                    SqlConnection conn = new SqlConnection(strconn);
+                    conn.Open();
+                    string sql = "select * from custphnumbers where customerphone=@customerphone";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@customerphone", Convert.ToInt64(contactnumber.Text));
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        Response.Write("<Script>alert('This phone number is already entered, please enter another phone number')</script>");
+                        conn.Close();
+                    }
+                    else
+                    {
+                        SqlConnection ncon = new SqlConnection(strconn);
+                        ncon.Open();
+                        string nsql = "insert into custphnumbers(customerphone, ispaid, isconverted, addedby, addeddatetime) values(@customerphone, @ispaid, @isconverted, @addedby, @addeddatetime)";
+                        SqlCommand ncmd = new SqlCommand(nsql, ncon);
+                        ncmd.CommandType = CommandType.Text;
+                        ncmd.Parameters.AddWithValue("@customerphone", Convert.ToInt64(contactnumber.Text.Trim()));
+                        ncmd.Parameters.AddWithValue("@ispaid", "0");
+                        ncmd.Parameters.AddWithValue("@isconverted", "0");
+                        ncmd.Parameters.AddWithValue("@addedby", Session["fullname"].ToString());
+                        ncmd.Parameters.AddWithValue("@addeddatetime", addeddatetime);
+                        ncmd.ExecuteNonQuery();
+                        ncon.Close();
+
+                        contactnumber.Text = "";
+                        Response.Write("<Script>alert('Phone number is added successfully')</script>");
+                    }
                 }
                 else
                 {
-                    SqlConnection ncon = new SqlConnection(strconn);
-                    ncon.Open();
-                    string nsql = "insert into custphnumbers(customerphone, ispaid, isconverted, addedby, addeddatetime) values(@customerphone, @ispaid, @isconverted, @addedby, @addeddatetime)";
-                    SqlCommand ncmd=new SqlCommand(nsql, ncon);
-                    ncmd.CommandType = CommandType.Text;
-                    ncmd.Parameters.AddWithValue("@customerphone", Convert.ToInt64(contactnumber.Text.Trim()));
-                    ncmd.Parameters.AddWithValue("@ispaid", "0");
-                    ncmd.Parameters.AddWithValue("@isconverted", "0");
-                    ncmd.Parameters.AddWithValue("@addedby", Session["fullname"].ToString());
-                    ncmd.Parameters.AddWithValue("@addeddatetime", addeddatetime);
-                    ncmd.ExecuteNonQuery();
-                    ncon.Close();
-
-                    contactnumber.Text = "";
-                    Response.Write("<Script>alert('Phone number is successfully added')</script>");
+                    Response.Write("<Script>alert('Please enter correct Phone Number')</script>");
                 }
             }
             catch (Exception)
             {
                 Response.Write("<Script>alert('Phone number is not added , please try again')</script>");
-            }     
+            }
         }
     }
 }

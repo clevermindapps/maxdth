@@ -147,7 +147,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="Properties\PublishProfiles\maxdth.com - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\clevermind-002-site5 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="maxhome.aspx" />
     <Content Include="modifyemptravelpayment.aspx" />

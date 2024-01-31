@@ -10,13 +10,13 @@
                 <div class="card">
                     <div class="card-body">
                         <center>
-                            <h4 class="mt-3 font-weight-bold">Add Customer Numbers</h4>
+                            <h4 class="mt-3 font-weight-bold">Add Customer Phone Numbers</h4>
                         </center>
                         <div class="mb-3 mt-3">
-                            <label class="form-label">Contact Number</label>
+                            <label class="form-label">Enter Contact Number</label>
                             <div class="form-group">
                                 <div>
-                                    <asp:TextBox CssClass="form-control" ID="contactnumber" runat="server" TextMode="Phone">
+                                    <asp:TextBox CssClass="form-control" ID="contactnumber" runat="server" TextMode="Number">
                                     </asp:TextBox>
                                 </div><br />
                                 <div>
